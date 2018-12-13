@@ -66,3 +66,21 @@ input[type="file"] {
     padding: 6px 12px;
     cursor: pointer;
 }
+
+/* scrollable div*/
+html, #root {
+    height: 100%
+}
+
+.jss2.jss3{
+    height: calc(100% - 65px);
+}
+
+.jss189 {
+    height: calc(100% - 132px);
+}
+
+
+#answerform{
+    overflow-y: scroll;
+}

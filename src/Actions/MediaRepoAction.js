@@ -1,5 +1,6 @@
 import ActionTypes from "./ActionTypes";
 import axios from "axios";
+//import history from "../history"
 
 export const receivedResponse = (obj) => ({
     type: ActionTypes.RECEIVED_RESPONSE,
@@ -30,7 +31,9 @@ export function handleFileSelect(evt) {
                     File: str,
                     MimeType: mimeType
                 }
-                var url = 'http://localhost:3001/saveImage'
+                console.log(JSON.stringify(requestBody))
+                var url = 'http://172.18.50.67:8065/plugins/com.mattermost.server-dbmediarepo'
+                //var url = 'http://localhost:3001/saveImage'
                 axios.post(url, JSON.stringify(requestBody))
                     .then((result) => {
                         const response = result.data;
