@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './Store/AppStore';
 import MediaRepoContainer from './Containers/MediaRepoContainer'
+import ListImageContainer from "./Containers/ListImageContainer";
 
 // Courtesy of https://feathericons.com/
 const Icon = () => <i className='icon fa fa-plug'/>;
 
 class HelloWorldPlugin {
-    initialize(registry) {
+    initialize(registry)
+    {
+        registry.registerRootComponent(ListImageContainer)
         registry.registerChannelHeaderButtonAction(
             // icon - JSX element to use as the button's icon
             <Icon />,
@@ -23,7 +26,7 @@ class HelloWorldPlugin {
                 );
             },
             // dropdown_text - string or JSX element shown for the dropdown button description
-            "Form",
+            "MediaRepo",
         );
     }
 }

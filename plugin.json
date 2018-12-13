@@ -1,6 +1,6 @@
 {
   "id": "com.mattermost.webapp-mediaRepo",
-  "name": "form",
+  "name": "mediarepo",
   "description": "",
   "webapp": {
     "bundle_path": "main.js"

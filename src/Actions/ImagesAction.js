@@ -2,7 +2,7 @@ import axios from "axios";
 import ActionTypes from "./ActionTypes";
 
 export function asyncCallAllImages() {
-    var url = 'http://localhost:3001/getImage'
+    var url = 'http://172.18.50.67:8065/plugins/com.mattermost.server-dblistimage'
     return function (dispatch) {
         axios.get(url)
             .then((result) => {
