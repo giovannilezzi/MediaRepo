@@ -26,13 +26,36 @@
 }
 
 
-.File{
-    border: 5px solid blue;
+.image{
+    border: 5px solid white;
     padding: 5px;
     margin-top: 2%;
     width: 50%;
     height: 50%;
+    background-image: url("./image/file-image-regular.svg");
+    background-repeat: no-repeat;
 }
+
+.pdf{
+    border: 5px solid white;
+    padding: 5px;
+    margin-top: 2%;
+    width: 50%;
+    height: 50%;
+    background-image: url("./image/file-pdf-regular.svg");
+    background-repeat: no-repeat;
+}
+
+.file{
+    border: 5px solid white;
+    padding: 5px;
+    margin-top: 2%;
+    width: 50%;
+    height: 50%;
+    background-image: url("./image/file-alt-regular.svg");
+    background-repeat: no-repeat;
+}
+
 
 input[type="file"] {
     display: none;
