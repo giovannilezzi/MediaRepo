@@ -15,5 +15,6 @@ export default keyMirror({
     RECEIVED_RESPONSE:null,
     RECEIVED_BLOGS: null,
     FILE: null,
-    RECEIVED_IMAGES: null
+    RECEIVED_IMAGES: null,
+    VIEW_FILE: null
 })

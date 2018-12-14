@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import Provider from "react-redux/es/components/Provider";
 import store from "../Store/AppStore";
 import ListFileContainer from "../Containers/ListFileContainer";
+import { Button } from 'react-bootstrap';
 
 
 class MediaRepo extends React.Component{
@@ -27,11 +28,15 @@ class MediaRepo extends React.Component{
     render() {
         return (
             <section className="section">
-                <button onClick={this.library}> Go to Library </button>
-                <label className="custom-file-upload">
+                <h1>Upload your file</h1>
+                <Button bsStyle="danger" name="Button" onClick={this.library}> Go To Library</Button>
+
+
+                <label className="custom-file-upload" >
                     <input type="file" onChange={this.props.handleFileSelect} />
-                    <i className="fa fa-cloud-upload"></i> Upload File
+                    <i className="fa fa-cloud-upload"></i>
                 </label>
+
 
                 <br/>
 
