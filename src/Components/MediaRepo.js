@@ -1,11 +1,9 @@
 import React from 'react';
-import  '../style.css';
 import ReactDOM from "react-dom";
 import Provider from "react-redux/es/components/Provider";
 import store from "../Store/AppStore";
 import ListFileContainer from "../Containers/ListFileContainer";
 import { Button } from 'react-bootstrap';
-
 
 class MediaRepo extends React.Component{
 

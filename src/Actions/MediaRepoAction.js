@@ -1,6 +1,5 @@
 import ActionTypes from "./ActionTypes";
 import axios from "axios";
-//import history from "../history"
 
 export const receivedResponse = (obj) => ({
     type: ActionTypes.RECEIVED_RESPONSE,
@@ -32,7 +31,8 @@ export function handleFileSelect(evt) {
                     MimeType: mimeType
                 }
                 console.log(JSON.stringify(requestBody))
-                var url = 'http://172.18.50.67:8065/plugins/com.mattermost.server-dbmediarepo'
+                var url = 'http://smart.nbsgroup.it/plugins/com.mattermost.server-dbmediarepo'
+                //'http://172.18.50.67:8065/plugins/com.mattermost.server-dbmediarepo'
                 //var url = 'http://localhost:3001/saveImage'
                 axios.post(url, JSON.stringify(requestBody))
                     .then((result) => {
@@ -40,7 +40,6 @@ export function handleFileSelect(evt) {
                         const obj = response.Response
                         console.log(obj)
                         dispatch(receivedResponse(obj))
-                        //history.push("/Images")
                     })
                     .catch((err) => {
                         console.log("Errore: " + err.response.data)

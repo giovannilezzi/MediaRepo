@@ -2,8 +2,8 @@ import axios from "axios";
 import ActionTypes from "./ActionTypes";
 
 export function asyncCallAllImages() {
-    var url = 'http://172.18.50.67:8065/plugins/com.mattermost.server-dblistimage'
-    //http://172.18.50.67:8065/plugins/com.mattermost.server-dblistimage
+    var url = 'http://smart.nbsgroup.it/plugins/com.mattermost.server-dblistimage'
+    //'http://172.18.50.67:8065/plugins/com.mattermost.server-dblistimage'
     //http://localhost:3001/getImage
     return function (dispatch) {
         axios.get(url)
@@ -17,6 +17,14 @@ export function asyncCallAllImages() {
             })
     };
 }
+
+export const saveFile = (obj) => (
+    {
+    type: ActionTypes.SAVE_ID,
+    payload: {
+        newValue: obj
+    },
+})
 
 
 export const receivedImages = (obj) => ({

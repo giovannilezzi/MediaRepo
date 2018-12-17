@@ -5,7 +5,8 @@ import ListFile from "../Components/ListFile";
 const mapStateToProps = (state) => {
     return {
         isLoading: state.ImagesReducer.isLoading,
-        listFiles: state.ImagesReducer.listFiles
+        listFiles: state.ImagesReducer.listFiles,
+        file:state.ImagesReducer.file
     };
 };
 
@@ -13,6 +14,10 @@ const mapDispatchToProps = (dispatch) => {
     return {
         asyncCallAllImages: () => {
             dispatch(actions.asyncCallAllImages());
+        },
+
+        saveFile: (file) => {
+            dispatch(actions.saveFile(file));
         }
     }
 }

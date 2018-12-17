@@ -14,11 +14,11 @@ const MediaRepoReducer = (state = initialState , action) => {
         case ActionTypes.RECEIVED_RESPONSE:
             ReactDOM.render(
                 <Provider store={store}>
+
                     <div>
                         <ListImageContainer/>
                     </div>
                 </Provider>,
-                //document.getElementById('post-list'),
                 document.getElementById('root'),
             );
             return {...state, isLoaded: true};
