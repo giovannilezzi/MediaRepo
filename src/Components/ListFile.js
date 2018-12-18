@@ -14,23 +14,32 @@ class ListFile extends React.Component{
 
     viewFile = () => {
         var that = this
-        $('li.image a').on('click', function (e) {
-            console.log("ciao")
+        $('li.image').on('click', function (e) {
             e.preventDefault();
-            var id = $(this).parent().attr('id');
-            that.props.saveFile(that.props.listFiles[id])
+            var id = $(this).attr('id');
+            console.log(id)
+            console.log(that.props.listFiles)
+            console.log(that.props.listFiles[id])
+            that.props.AsyncCallGetFileById(id)
+            //that.props.saveFile(that.props.listFiles[id-1])
         });
-        $('li.pdf a').on('click', function (e) {
-            console.log("ciao")
+        $('li.pdf').on('click', function (e) {
             e.preventDefault();
-            var id = $(this).parent().attr('id');
-            that.props.saveFile(that.props.listFiles[id])
+            var id = $(this).attr('id');
+            console.log(id)
+            console.log(that.props.listFiles)
+            console.log(that.props.listFiles[id])
+            that.props.AsyncCallGetFileById(id)
+            //that.props.saveFile(that.props.listFiles[id-1])
         });
-        $('li.file a').on('click', function (e) {
-            console.log("ciao")
+        $('li.file').on('click', function (e) {
             e.preventDefault();
-            var id = $(this).parent().attr('id');
-            that.props.saveFile(that.props.listFiles[id])
+            var id = $(this).attr('id');
+            console.log(id)
+            console.log(that.props.listFiles)
+            console.log(that.props.listFiles[id])
+            that.props.AsyncCallGetFileById(id)
+            //that.props.saveFile(that.props.listFiles[id-1])
         });
     }
 

@@ -3,7 +3,9 @@ import Preview from "../Components/Preview";
 
 const mapStateToProps = (state) => {
     return {
-        file: state.ImagesReducer.file
+        file: state.FileReducer.file,
+        isLoading: state.FileReducer.isLoading
+
     };
 };
 

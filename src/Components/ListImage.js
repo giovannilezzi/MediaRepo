@@ -18,7 +18,7 @@ class ListImage extends React.Component{
         if (this.props.listFiles && !this.props.isLoading) {
             listItems =
                 this.props.listFiles.map((image) =>
-                    <object className="File" key={image.Id} data={image.MimeType+image.File} width="800" height="400">
+                    <object className="File" key={image.Id}  width="800" height="400">
                         {image.Name + image.MimeType}
                     </object>
                 )
@@ -36,3 +36,4 @@ class ListImage extends React.Component{
 
 export default ListImage;
 
+/*data={image.MimeType+image.File}*/
