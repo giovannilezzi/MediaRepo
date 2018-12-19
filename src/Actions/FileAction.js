@@ -2,8 +2,8 @@ import axios from "axios";
 import ActionTypes from "./ActionTypes";
 
 export function AsyncCallGetFileById(id) {
-    var url = 'http://smart.nbsgroup.it/plugins/com.mattermost.server-dbgetimagebyid'
-    //'http://localhost:3002/getImageById'
+    var url = //'http://smart.nbsgroup.it/plugins/com.mattermost.server-dbgetimagebyid'
+    'http://localhost:3002/getImageById'
     //'http://smart.nbsgroup.it/plugins/com.mattermost.server-dblistimage'
     //'http://172.18.50.67:8065/plugins/com.mattermost.server-dblistimage'
     //http://localhost:3001/getImage

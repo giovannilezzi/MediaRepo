@@ -8,7 +8,7 @@ class ListFile extends React.Component{
     }
 
     componentWillMount() {
-        this.props.asyncCallAllImages()
+        this.props.asyncCallAllImages('TownSquare')
     }
 
     viewFile = () => {
