@@ -20,7 +20,7 @@ const FileReducer = (state = initialState , action) => {
                         <PreviewContainer/>
                     </div>
                 </Provider>,
-                document.getElementById('root'),
+                document.getElementById('page'),
             );
             return { ...state, file: action.payload.newValue, isLoading: false};
 

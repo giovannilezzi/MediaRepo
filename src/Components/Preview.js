@@ -10,7 +10,7 @@ class ListImage extends React.Component{
         let file = ""
         if (this.props.file && !this.props.isLoading) {
             file =
-                    <iframe className="File" id={this.props.file.Id} src={this.props.file.MimeType+this.props.file.File} allowFullScreen>
+                    <iframe className="File" id={this.props.file.Id} src={this.props.file.MimeType+this.props.file.File}>
                         {this.props.file.Name + this.props.file.MimeType}
                     </iframe>
         }

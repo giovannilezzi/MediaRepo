@@ -20,7 +20,7 @@ class MediaRepo extends React.Component{
                     <ListFileContainer/>
                 </div>
             </Provider>,
-            document.getElementById('root'),
+            document.getElementById('page'),
         );
     }
 
@@ -34,17 +34,12 @@ class MediaRepo extends React.Component{
                 <h1>Upload your file</h1>
                 <h2 id = 'post-list2'>TownSquare</h2>
                 <Button bsStyle="danger" name="Button" onClick={this.library}> Go To Library</Button>
-
-
                 <label className="custom-file-upload" >
                     <input type="file" onChange={this.handleFileSelect} />
                     <i className="fa fa-cloud-upload"></i>
                 </label>
 
 
-                <br/>
-                <img src={ this.props.files }/>
-                <object className="files" data={this.props.files} />
             </section>
         );
     }

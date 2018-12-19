@@ -46,7 +46,7 @@ class ListFile extends React.Component{
         let listImage = [];
         if (this.props.listFiles && !this.props.isLoading) {
             for(var i = 0; i<this.props.listFiles.length; i++){
-                if(this.props.listFiles[i].MimeType == 'data:image/png;base64,' ) {
+                if(this.props.listFiles[i].MimeType == 'data:image/png;base64,' || this.props.listFiles[i].MimeType == 'data:image/jpeg;base64,') {
                     listImage.push(
                         <li id={this.props.listFiles[i].Id} onClick={this.viewFile} className="image" key={this.props.listFiles[i].Id} width="800" height="400">
                             {
@@ -73,6 +73,7 @@ class ListFile extends React.Component{
                         </li>
                     )
                 }
+
             }
         }
         else

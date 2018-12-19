@@ -1,9 +1,5 @@
 import ActionTypes from "../Actions/ActionTypes";
-import Provider from "react-redux/es/components/Provider";
-import store from "../Store/AppStore";
-import PreviewContainer from "../Containers/PreviewContainer";
 import React from "react";
-import ReactDOM from "react-dom";
 
 const initialState = {
     isLoading: true,
