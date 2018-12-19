@@ -1,14 +1,18 @@
 import axios from "axios";
 import ActionTypes from "./ActionTypes";
 
-export function asyncCallAllImages() {
-    var url = 'http://smart.nbsgroup.it/plugins/com.mattermost.server-getfilename'
-    //'http://localhost:3002/getImage'
+export function asyncCallAllImages(divId) {
+    var url = //'http://smart.nbsgroup.it/plugins/com.mattermost.server-getfilename'
+    'http://localhost:3002/getImage'
     //'http://smart.nbsgroup.it/plugins/com.mattermost.server-dblistimage'
     //'http://172.18.50.67:8065/plugins/com.mattermost.server-dblistimage'
     //http://localhost:3001/getImage
+    var requestBody = {
+        Channel: divId
+    }
+    console.log(JSON.stringify(requestBody))
     return function (dispatch) {
-        axios.get(url)
+        axios.post(url, JSON.stringify(requestBody))
             .then((result) => {
                 const response = result.data.Response;
                 console.log(response)

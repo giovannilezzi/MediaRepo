@@ -11,8 +11,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        asyncCallAllImages: () => {
-            dispatch(actions.asyncCallAllImages());
+        asyncCallAllImages: (divId) => {
+            dispatch(actions.asyncCallAllImages(divId));
         }
     }
 }

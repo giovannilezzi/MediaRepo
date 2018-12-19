@@ -1,5 +1,4 @@
 import React from 'react';
-import '../style.css'
 import $ from 'jquery'
 
 class ListFile extends React.Component{

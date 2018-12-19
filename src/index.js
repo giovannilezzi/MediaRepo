@@ -6,9 +6,8 @@ import MediaRepoContainer from "./Containers/MediaRepoContainer";
 
 ReactDOM.render(
     <Provider store={store}>
-        <div>
             <MediaRepoContainer/>
-        </div>
     </Provider>,
+
     document.getElementById('root'),
 );

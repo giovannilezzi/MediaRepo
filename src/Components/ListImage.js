@@ -1,6 +1,5 @@
 import React from 'react';
-import '../style.css'
-
+import $ from 'jquery'
 
 class ListImage extends React.Component{
 
@@ -9,7 +8,7 @@ class ListImage extends React.Component{
     }
 
     componentWillMount() {
-        this.props.asyncCallAllImages()
+        this.props.asyncCallAllImages('TownSquare')
     }
 
     render() {
@@ -19,7 +18,7 @@ class ListImage extends React.Component{
             listItems =
                 this.props.listFiles.map((image) =>
                     <object className="File" key={image.Id}  width="800" height="400">
-                        {image.Name + image.MimeType}
+                        {image.Name + image.MimeType + image.Channel}
                     </object>
                 )
         }
@@ -27,7 +26,8 @@ class ListImage extends React.Component{
             listItems = <h3 className="loading-indicator">Loading ...</h3>
 
         return (
-            <div>
+            <div >
+                <h1 id='post-list'>TownSquare</h1>
                 {listItems}
             </div>
         )

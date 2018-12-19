@@ -10,8 +10,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        handleFileSelect: (evt) => {
-            dispatch(actions.handleFileSelect(evt))
+        handleFileSelect: (evt, divId) => {
+            dispatch(actions.handleFileSelect(evt, divId))
         }
     }
 }

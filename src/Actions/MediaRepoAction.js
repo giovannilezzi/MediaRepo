@@ -1,5 +1,7 @@
 import ActionTypes from "./ActionTypes";
 import axios from "axios";
+import $ from "jquery";
+
 
 export const receivedResponse = (obj) => ({
     type: ActionTypes.RECEIVED_RESPONSE,
@@ -15,7 +17,7 @@ export const file = (obj) => ({
     },
 });
 
-export function handleFileSelect(evt) {
+export function handleFileSelect(evt, divId) {
     var f = evt.target.files[0]; // FileList object
     return function (dispatch) {
         getBase64(f).then(
@@ -28,17 +30,16 @@ export function handleFileSelect(evt) {
                 var requestBody = {
                     Name:f.name,
                     File: str,
-                    MimeType: mimeType
+                    MimeType: mimeType,
+                    Channel: divId
                 }
-                console.log(JSON.stringify(requestBody))
-                var url = 'http://smart.nbsgroup.it/plugins/com.mattermost.server-dbmediarepo'
+                //var url = 'http://smart.nbsgroup.it/plugins/com.mattermost.server-dbmediarepo'
                 //'http://172.18.50.67:8065/plugins/com.mattermost.server-dbmediarepo'
-                //var url = 'http://localhost:3001/saveImage'
+                var url = 'http://localhost:3002/saveImage'
                 axios.post(url, JSON.stringify(requestBody))
                     .then((result) => {
                         const response = result.data;
                         const obj = response.Response
-                        console.log(obj)
                         dispatch(receivedResponse(obj))
                     })
                     .catch((err) => {
