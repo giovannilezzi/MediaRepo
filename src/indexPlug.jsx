@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import store from './Store/AppStore';
 import MediaRepoContainer from './Containers/MediaRepoContainer'
 import $ from 'jquery'
+import Menu from "./Components/Menu";
 
 // Courtesy of https://feathericons.com/
 const Icon = () => <i className='icon fa fa-plug'/>;
@@ -19,6 +20,10 @@ class HelloWorldPlugin {
                 ReactDOM.render(
                     <Provider store={store}>
                         <div>
+                            <Menu/>
+                        </div>
+
+                        <div id="page">
                             <MediaRepoContainer/>
                         </div>
                     </Provider>,

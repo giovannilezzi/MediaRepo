@@ -9,6 +9,8 @@ class ListFile extends React.Component{
 
     componentWillMount() {
         this.props.asyncCallAllImages('Town Square')
+        //su mattermost:  this.props.asyncCallAllImages($('#channelHeaderDropdownButton').text())
+      //in local:  this.props.asyncCallAllImages('Town Square')
     }
 
     viewFile = () => {
