@@ -46,8 +46,8 @@ class Menu extends React.Component{
     render() {
         return (
             <ul className="topnav">
-                <li><a id='upload' className="active" href="#upload" onClick={this.upload}>Upload</a></li>
-                <li><a id='library' href="#library" onClick={this.library}>Library</a></li>
+                <li className="menuover"><a id='upload' className="active amenuover" href="#upload" onClick={this.upload}>Upload</a></li>
+                <li  className="menuover"><a id='library' className="amenuover" href="#library" onClick={this.library}>Library</a></li>
                 <li className="right"><a href="#about">About</a></li>
             </ul>
         )

@@ -36,7 +36,8 @@
 
 
 .image{
-    border: 5px solid white;
+    border: 5px solid blue;
+    border-radius: 10px;
     padding: 1%;
     margin-top: 2%;
     width: 50%;
@@ -47,7 +48,8 @@
 }
 
 .pdf{
-    border: 5px solid white;
+    border: 5px solid blue;
+    border-radius: 10px;
     padding: 1%;
     margin-top: 2%;
     width: 50%;
@@ -58,7 +60,8 @@
 }
 
 .file{
-    border: 5px solid white;
+    border: 5px solid blue;
+    border-radius: 10px;
     padding: 1%;
     margin-top: 2%;
     width: 50%;
@@ -193,7 +196,7 @@ html, #root {
 
 
 
-ul {
+.topnav{
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -201,20 +204,27 @@ ul {
     background-color: blue;
 }
 
-li {
+.menuover {
     float: left;
 }
 
-li a {
+.menuover {
     display: block;
     color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+.amenuover {
+    display: block;
+    color: blue;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
-
 /* Change the link color to #111 (black) on hover */
-li a:hover {
+.amenuover:hover {
     background-color: cyan;
     width: 100%;
 }
