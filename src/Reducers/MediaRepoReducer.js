@@ -12,15 +12,7 @@ const initialState = {
 const MediaRepoReducer = (state = initialState , action) => {
     switch (action.type) {
         case ActionTypes.RECEIVED_RESPONSE:
-            ReactDOM.render(
-                <Provider store={store}>
-
-                    <div>
-                        <ListFileContainer/>
-                    </div>
-                </Provider>,
-                document.getElementById('root'),
-            );
+            alert('File Caricato')
             return {...state, isLoaded: true};
 
         case ActionTypes.FILE:

@@ -4,7 +4,7 @@ import store from "../Store/AppStore";
 import ListFileContainer from "../Containers/ListFileContainer";
 import React from "react";
 import MediaRepoContainer from "../Containers/MediaRepoContainer";
-
+import $ from 'jquery'
 
 class Menu extends React.Component{
 
@@ -13,6 +13,10 @@ class Menu extends React.Component{
     }
 
     upload = ( ) =>{
+        if ($("#upload").attr('class') != 'active'){
+            $("#library").removeClass("active");
+            $("#upload").addClass("active");
+        }
         ReactDOM.render(
             <Provider store={store}>
                 <div>
@@ -25,6 +29,10 @@ class Menu extends React.Component{
 
 
     library = ( ) =>{
+        if ($("#library").attr('class') != 'active'){
+            $("#upload").removeClass("active");
+            $("#library").addClass("active");
+        }
         ReactDOM.render(
             <Provider store={store}>
                 <div>
@@ -38,8 +46,8 @@ class Menu extends React.Component{
     render() {
         return (
             <ul className="topnav">
-                <li><a className="active" href="#upload" onClick={this.upload}>Upload</a></li>
-                <li><a href="#library" onClick={this.library}>Library</a></li>
+                <li><a id='upload' className="active" href="#upload" onClick={this.upload}>Upload</a></li>
+                <li><a id='library' href="#library" onClick={this.library}>Library</a></li>
                 <li className="right"><a href="#about">About</a></li>
             </ul>
         )

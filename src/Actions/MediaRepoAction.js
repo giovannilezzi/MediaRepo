@@ -35,7 +35,8 @@ export function handleFileSelect(evt, divId) {
                 }
                 //var url = 'http://smart.nbsgroup.it/plugins/com.mattermost.server-dbmediarepo'
                 //'http://172.18.50.67:8065/plugins/com.mattermost.server-dbmediarepo'
-                var url = 'http://localhost:3002/saveImage'
+                var url = 'http://smart.nbsgroup.it/plugins/com.mattermost.server-savefile'
+                //'http://localhost:3002/saveImage'
                 axios.post(url, JSON.stringify(requestBody))
                     .then((result) => {
                         const response = result.data;

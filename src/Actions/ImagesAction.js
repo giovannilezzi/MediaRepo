@@ -2,8 +2,9 @@ import axios from "axios";
 import ActionTypes from "./ActionTypes";
 
 export function asyncCallAllImages(divId) {
-    var url = //'http://smart.nbsgroup.it/plugins/com.mattermost.server-getfilename'
-    'http://localhost:3002/getImage'
+    var url = 'http://smart.nbsgroup.it/plugins/com.mattermost.server-getfilesbychannel '
+    //'http://smart.nbsgroup.it/plugins/com.mattermost.server-getfilename'
+    //'http://localhost:3002/getImage'
     //'http://smart.nbsgroup.it/plugins/com.mattermost.server-dblistimage'
     //'http://172.18.50.67:8065/plugins/com.mattermost.server-dblistimage'
     //http://localhost:3001/getImage

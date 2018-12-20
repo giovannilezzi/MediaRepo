@@ -1,9 +1,10 @@
 import React from 'react';
 
-class ListImage extends React.Component{
+class Preview extends React.Component{
 
     constructor(props) {
         super(props);
+        console.log(this.props)
     }
 
     render() {
@@ -25,4 +26,4 @@ class ListImage extends React.Component{
     }
 }
 
-export default ListImage;
+export default Preview;

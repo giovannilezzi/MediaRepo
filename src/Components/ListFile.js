@@ -72,6 +72,14 @@ class ListFile extends React.Component{
                             }
                         </li>
                     )
+                }else {
+                    listImage.push(
+                        <li id={this.props.listFiles[i].Id} onClick={this.viewFile} className="file" key={this.props.listFiles[i].Id} width="800" height="400">
+                            {
+                                <a className="link" > {this.props.listFiles[i].Name} </a>
+                            }
+                        </li>
+                    )
                 }
 
             }
