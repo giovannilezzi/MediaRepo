@@ -13,9 +13,9 @@ class Menu extends React.Component{
     }
 
     upload = ( ) =>{
-        if ($("#upload").attr('class') != 'active'){
-            $("#library").removeClass("active");
-            $("#upload").addClass("active");
+        if ($("#upload").attr('class') != 'active_mr'){
+            $("#library").removeClass("active_mr");
+            $("#upload").addClass("active_mr");
         }
         ReactDOM.render(
             <Provider store={store}>
@@ -29,9 +29,9 @@ class Menu extends React.Component{
 
 
     library = ( ) =>{
-        if ($("#library").attr('class') != 'active'){
-            $("#upload").removeClass("active");
-            $("#library").addClass("active");
+        if ($("#library").attr('class') != 'active_mr'){
+            $("#upload").removeClass("active_mr");
+            $("#library").addClass("active_mr");
         }
         ReactDOM.render(
             <Provider store={store}>
@@ -46,7 +46,7 @@ class Menu extends React.Component{
     render() {
         return (
             <ul className="topnav">
-                <li className="menuover"><a id='upload' className="active amenuover" href="#upload" onClick={this.upload}>Upload</a></li>
+                <li className="menuover"><a id='upload' className="active_mr amenuover" href="#upload" onClick={this.upload}>Upload</a></li>
                 <li  className="menuover"><a id='library' className="amenuover" href="#library" onClick={this.library}>Library</a></li>
                 <li className="right"><a href="#about">About</a></li>
             </ul>

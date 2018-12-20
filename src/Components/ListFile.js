@@ -96,7 +96,7 @@ class ListFile extends React.Component{
         return (
             <div>
                 <div>
-                    <h1>Libreria Multimediale</h1></div>
+                    <h1 className="titolo">Libreria Multimediale</h1></div>
                     {listImage}
             </div>
         )

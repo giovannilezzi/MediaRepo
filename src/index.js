@@ -5,6 +5,7 @@ import store from './Store/AppStore'
 import MediaRepoContainer from "./Containers/MediaRepoContainer";
 import './style.css'
 import Menu from "./Components/Menu";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
     <Provider store={store}>
