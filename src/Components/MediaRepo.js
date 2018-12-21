@@ -39,6 +39,9 @@ class MediaRepo extends React.Component{
                 <label className="fas fa-cloud-upload-alt fa-9x custom-file-upload " >
                     <input type="file" onChange={this.handleFileSelect} />
                 </label>
+
+
+
             </section>
         );
     }
