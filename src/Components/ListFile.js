@@ -50,35 +50,35 @@ class ListFile extends React.Component{
             for(var i = 0; i<this.props.listFiles.length; i++){
                 if(this.props.listFiles[i].MimeType == 'data:image/png;base64,' || this.props.listFiles[i].MimeType == 'data:image/jpeg;base64,') {
                     listImage.push(
-                        <li className="menuover" id={this.props.listFiles[i].Id} onClick={this.viewFile} className="image" key={this.props.listFiles[i].Id} width="800" height="400">
+                        <li className="menuover" id={this.props.listFiles[i].Id} onClick={this.viewFile} className="image" key={this.props.listFiles[i].Id} >
                             {
-                                <a className="link amenuover" > {this.props.listFiles[i].Name} </a>
+                                <a className="far fa-file-image fa-9x link " > {this.props.listFiles[i].Name} </a>
                             }
                         </li>
                     )
                 }
                 else if(this.props.listFiles[i].MimeType == 'data:application/pdf;base64,' ) {
                     listImage.push(
-                        <li className="menuover" id={this.props.listFiles[i].Id} onClick={this.viewFile} className="pdf" key={this.props.listFiles[i].Id} width="800" height="400">
+                        <li className="menuover" id={this.props.listFiles[i].Id} onClick={this.viewFile} className="pdf" key={this.props.listFiles[i].Id} >
                             {
-                                <a className="link amenuover" > {this.props.listFiles[i].Name} </a>
+                                <a className=" far fa-file-pdf fa-9x link" > {this.props.listFiles[i].Name} </a>
                             }
                         </li>
                     )
                 }
                 else if(this.props.listFiles[i].MimeType == 'data:text/plain;base64,' ) {
                     listImage.push(
-                        <li className="menuover" id={this.props.listFiles[i].Id} onClick={this.viewFile} className="file" key={this.props.listFiles[i].Id} width="800" height="400">
+                        <li className="menuover" id={this.props.listFiles[i].Id} onClick={this.viewFile} className="file" key={this.props.listFiles[i].Id} >
                             {
-                                <a className="link amenuover" > {this.props.listFiles[i].Name} </a>
+                                <a className="far fa-file-alt fa-9x link" > {this.props.listFiles[i].Name} </a>
                             }
                         </li>
                     )
                 }else {
                     listImage.push(
-                        <li className="menuover" id={this.props.listFiles[i].Id} onClick={this.viewFile} className="file" key={this.props.listFiles[i].Id} width="800" height="400">
+                        <li className="menuover" id={this.props.listFiles[i].Id} onClick={this.viewFile} className="file" key={this.props.listFiles[i].Id} >
                             {
-                                <a className="link amenuover" > {this.props.listFiles[i].Name} </a>
+                                <a className="far fa-file-alt fa-9x link" > {this.props.listFiles[i].Name} </a>
                             }
                         </li>
                     )
@@ -97,7 +97,8 @@ class ListFile extends React.Component{
             <div>
                 <div>
                     <h1 className="titolo">Libreria Multimediale</h1></div>
-                    {listImage}
+                 {listImage}
+
             </div>
         )
     }

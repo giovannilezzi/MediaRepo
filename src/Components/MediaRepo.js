@@ -35,12 +35,10 @@ class MediaRepo extends React.Component{
             <section className="section">
                 <h1 className="titolo">Upload your file</h1>
                 <h2 id = 'post-list2'>Town Square</h2>
-                <Button bsStyle="danger" name="Button" onClick={this.library}> Go To Library</Button>
-                <label className="custom-file-upload" >
+
+                <label className="fas fa-cloud-upload-alt fa-9x custom-file-upload " >
                     <input type="file" onChange={this.handleFileSelect} />
                 </label>
-
-
             </section>
         );
     }

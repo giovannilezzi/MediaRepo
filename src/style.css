@@ -15,7 +15,10 @@
 
 .section{
     margin-left: 10%;
-    margin-top: 0%;
+    margin-top: 0px;
+    width: 80%;
+    height: 70%;
+    position: absolute;
 }
 
 
@@ -40,22 +43,21 @@
     border-radius: 10px;
     padding: 1%;
     margin-top: 2%;
-    width: 50%;
+    margin-left: 5%;
+    width: 90%;
     height: 50%;
-    background-image: url("./image/file-image-regular.svg");
-    background-repeat: no-repeat;
     cursor: pointer;
 }
+
 
 .pdf{
     border: 5px solid #153E7E;
     border-radius: 10px;
     padding: 1%;
     margin-top: 2%;
-    width: 50%;
+    margin-left: 5%;
+    width: 90%;
     height: 50%;
-    background-image: url("./image/file-pdf-regular.svg");
-    background-repeat: no-repeat;
     cursor: pointer;
 }
 
@@ -64,37 +66,34 @@
     border-radius: 10px;
     padding: 1%;
     margin-top: 2%;
-    width: 50%;
+    margin-left: 5%;
+    width: 90%;
     height: 50%;
-    background-image: url("./image/file-alt-regular.svg");
-    background-repeat: no-repeat;
     cursor: pointer;
 }
 
+
 .link{
     text-decoration: underline;
-    font-size: 2vw;
+    font-size: 4vw;
     color: #153E7E;
     background-color: transparent;
     cursor: pointer;
 }
 
 
+
+
 input[type="file"] {
     display: none;
 }
 .custom-file-upload {
-    border: 3px solid #000000;
+  /*  border: 3px solid #000000;*/
     display: inline-block;
-    min-height: 20%;
-    min-width: 20%;
-    margin-top: 10%;
-    padding: 6% 3%;
+    margin-top: -2%;
+    padding: 2% 2%;
     cursor: pointer;
-    margin-left: 10%;
-    background-image: url("./image/cloud_upload.svg");
-    background-repeat: no-repeat;
-    background-position: 50% 100%;
+    position: center;
 }
 
 /* scrollable div*/
@@ -198,11 +197,11 @@ html, #root {
 
 .topnav{
     list-style-type: none;
-    margin: 0;
-    padding: 0;
     overflow: hidden;
     background-color: #153E7E;
 }
+
+
 
 .menuover {
     float: left;
@@ -255,6 +254,8 @@ ul.topnav {
     list-style-type: none;
     margin: 0;
     padding: 0;
+
+    margin-top: 50px;
     overflow: hidden;
     background-color: #153E7E;
 }
