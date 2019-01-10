@@ -1,3 +1,7 @@
+/*
+non usato da nessuno
+ */
+
 import { connect } from 'react-redux';
 import * as actions from '../Actions/ImagesAction';
 import ListImage from "../Components/ListImage";
