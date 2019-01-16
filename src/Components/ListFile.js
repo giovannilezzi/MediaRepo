@@ -5,6 +5,11 @@ class ListFile extends React.Component{
 
     constructor(props) {
         super(props);
+        this.state = {
+            imageClicked: false,
+            pdfClicked: false,
+            testiClicked: false
+        }
     }
 
     componentWillMount() {
@@ -12,6 +17,9 @@ class ListFile extends React.Component{
         //su mattermost:  this.props.asyncCallAllImages($('#channelHeaderDropdownButton').text())
       //in local:  this.props.asyncCallAllImages('Town Square')
     }
+
+
+
 
     viewFile = () => {
 
@@ -36,8 +44,65 @@ class ListFile extends React.Component{
         });
     }
 
+    //Dall'array di tutti i file, si va a trovare quello con il nome inserito nell'input. In caso positivo si
+    // mostra solo il file cercato, in caso negativo si mostrano tutti con una stampa di alert.
+    searchFile = () =>{
+
+
+    }
+
+    //Dall'array dei files, si vanno a cercare solo i files con l'estenzione relatica al filtraggio selezionato dal menu a tendina.
+    filterImage = () =>{
+        this.setState({
+            imageClicked : true,
+            testiClicked : false,
+            pdfClicked: false,
+        })
+    }
+
+    filterPdf = () =>{
+        this.setState({
+            pdfClicked: true,
+            testiClicked : false,
+            imageClicked: false
+        })
+    }
+
+    filterTesti = () =>{
+        this.setState({
+            testiClicked : true,
+            pdfClicked: false,
+            imageClicked: false
+        })
+    }
+
+    resetFilter = () =>{
+        this.setState({
+            imageClicked: false,
+            pdfClicked: false,
+            testiClicked : false
+
+        })
+    }
+
+
+    /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+    dropdownMenu = () => {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+
+
+
     render() {
         let listImage = [];
+        let image = [];
+        let pdf = [];
+        let testi = [];
+        let altri = [];
+
+
         if (this.props.listFiles && !this.props.isLoading) {
             for(var i = 0; i<this.props.listFiles.length; i++){
                 if(this.props.listFiles[i].MimeType == 'data:image/png;base64,' || this.props.listFiles[i].MimeType == 'data:image/jpeg;base64,') {
@@ -48,6 +113,17 @@ class ListFile extends React.Component{
                             }
                         </li>
                     )*/
+
+
+                    image.push(
+                        <a className="tile" id={this.props.listFiles[i].Id} onClick={this.viewFile}  key={this.props.listFiles[i].Id}>
+                            <h2 className="tile-description">{this.props.listFiles[i].Name}</h2>
+                            <div className="tile-divider"></div>
+                            <p className=" far fa-file-image fa-3x"> </p>
+                        </a>
+                    )
+
+
                     listImage.push(
                     <a className="tile" id={this.props.listFiles[i].Id} onClick={this.viewFile}  key={this.props.listFiles[i].Id}>
                         <h2 className="tile-description">{this.props.listFiles[i].Name}</h2>
@@ -65,6 +141,14 @@ class ListFile extends React.Component{
                             }
                         </li>
                     )*/
+                    pdf.push(
+                        <a className="tile" id={this.props.listFiles[i].Id} onClick={this.viewFile}  key={this.props.listFiles[i].Id}>
+                            <h2 className="tile-description">{this.props.listFiles[i].Name}</h2>
+                            <div className="tile-divider"></div>
+                            <p className=" far fa-file-pdf fa-3x"> </p>
+                        </a>
+                    )
+
                     listImage.push(
                         <a className="tile" id={this.props.listFiles[i].Id} onClick={this.viewFile}  key={this.props.listFiles[i].Id}>
                             <h2 className="tile-description">{this.props.listFiles[i].Name}</h2>
@@ -81,6 +165,13 @@ class ListFile extends React.Component{
                             }
                         </li>
                     )*/
+                    testi.push(
+                        <a className="tile" id={this.props.listFiles[i].Id} onClick={this.viewFile}  key={this.props.listFiles[i].Id}>
+                            <h2 className="tile-description">{this.props.listFiles[i].Name}</h2>
+                            <div className="tile-divider"></div>
+                            <p className=" far fa-file-alt fa-3x"> </p>
+                        </a>
+                    )
                     listImage.push(
                         <a className="tile" id={this.props.listFiles[i].Id} onClick={this.viewFile}  key={this.props.listFiles[i].Id}>
                             <h2 className="tile-description">{this.props.listFiles[i].Name}</h2>
@@ -96,6 +187,7 @@ class ListFile extends React.Component{
                             }
                         </li>
                     )*/
+                    altri.push(this.props.listFiles[i]);
                     listImage.push(
                         <a className="tile" id={this.props.listFiles[i].Id} onClick={this.viewFile}  key={this.props.listFiles[i].Id}>
                             <h2 className="tile-description">{this.props.listFiles[i].Name}</h2>
@@ -104,8 +196,8 @@ class ListFile extends React.Component{
                         </a>
                     )
                 }
-
             }
+
         }
         else
             listImage =
@@ -114,12 +206,50 @@ class ListFile extends React.Component{
                               < div  id = "loader"></div>
                       </div>
         console.log($("#root"))
+
+
         return (
             <div>
                 <div>
+                    <div className="dropdown">
+                        <button onClick={this.dropdownMenu} className="dropbtn">Filtra</button>
+                        <div id="myDropdown" className="dropdown-content">
+                            <a onClick={this.filterImage}>Immagini</a>
+                            <a onClick={this.filterPdf}>PDF</a>
+                            <a onClick={this.filterTesti}>Testo</a>
+                            <a onClick={this.resetFilter}>Resetta</a>
+                        </div>
+                    </div>
+
                     <h1 className="titolo">Libreria Multimediale</h1></div>
+
                     <div className="tiles-flex">
-                         {listImage}
+                         {
+                             this.state.imageClicked?
+                                 image
+                                 :
+                                 <div></div>
+                         }
+                         {
+                             this.state.pdfClicked?
+                                 pdf
+                                 :
+                                 <div></div>
+                         }
+                        {
+                            this.state.testiClicked?
+                                testi
+                                :
+                                <div></div>
+                        }
+                        {
+                            this.state.imageClicked || this.state.pdfClicked || this.state.testiClicked?
+                                <div></div>
+                                :
+                                listImage
+                        }
+
+
                      </div>
             </div>
         )
