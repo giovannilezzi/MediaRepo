@@ -8,7 +8,8 @@ class ListFile extends React.Component{
         this.state = {
             imageClicked: false,
             pdfClicked: false,
-            testiClicked: false
+            testiClicked: false,
+            altriClicked: false
         }
     }
 
@@ -57,6 +58,7 @@ class ListFile extends React.Component{
             imageClicked : true,
             testiClicked : false,
             pdfClicked: false,
+            altriClicked: false
         })
     }
 
@@ -64,13 +66,24 @@ class ListFile extends React.Component{
         this.setState({
             pdfClicked: true,
             testiClicked : false,
-            imageClicked: false
+            imageClicked: false,
+            altriClicked: false
         })
     }
 
     filterTesti = () =>{
         this.setState({
             testiClicked : true,
+            pdfClicked: false,
+            imageClicked: false,
+            altriClicked: false
+        })
+    }
+
+    filterAltri = () =>{
+        this.setState({
+            altriClicked: true,
+            testiClicked : false,
             pdfClicked: false,
             imageClicked: false
         })
@@ -80,7 +93,8 @@ class ListFile extends React.Component{
         this.setState({
             imageClicked: false,
             pdfClicked: false,
-            testiClicked : false
+            testiClicked : false,
+            altriClicked: false
 
         })
     }
@@ -187,7 +201,14 @@ toggle between hiding and showing the dropdown content */
                             }
                         </li>
                     )*/
-                    altri.push(this.props.listFiles[i]);
+                    altri.push(
+                        <a className="tile" id={this.props.listFiles[i].Id} onClick={this.viewFile}  key={this.props.listFiles[i].Id}>
+                            <h2 className="tile-description">{this.props.listFiles[i].Name}</h2>
+                            <div className="tile-divider"></div>
+                            <p className=" far fa-file-alt fa-3x"> </p>
+                        </a>
+                    )
+
                     listImage.push(
                         <a className="tile" id={this.props.listFiles[i].Id} onClick={this.viewFile}  key={this.props.listFiles[i].Id}>
                             <h2 className="tile-description">{this.props.listFiles[i].Name}</h2>
@@ -217,6 +238,7 @@ toggle between hiding and showing the dropdown content */
                             <a onClick={this.filterImage}>Immagini</a>
                             <a onClick={this.filterPdf}>PDF</a>
                             <a onClick={this.filterTesti}>Testo</a>
+                            <a onClick={this.filterAltri}>Altri</a>
                             <a onClick={this.resetFilter}>Resetta</a>
                         </div>
                     </div>
@@ -243,7 +265,13 @@ toggle between hiding and showing the dropdown content */
                                 <div></div>
                         }
                         {
-                            this.state.imageClicked || this.state.pdfClicked || this.state.testiClicked?
+                            this.state.altriClicked?
+                                altri
+                                :
+                                <div></div>
+                        }
+                        {
+                            this.state.imageClicked || this.state.pdfClicked || this.state.testiClicked || this.state.altriClicked?
                                 <div></div>
                                 :
                                 listImage
