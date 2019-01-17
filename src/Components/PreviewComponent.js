@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Preview extends React.Component{
+class PreviewComponent extends React.Component{
 
     constructor(props) {
         super(props);
@@ -26,4 +26,4 @@ class Preview extends React.Component{
     }
 }
 
-export default Preview;
+export default PreviewComponent;

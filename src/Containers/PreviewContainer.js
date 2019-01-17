@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Preview from "../Components/Preview";
+import PreviewComponent from "../Components/PreviewComponent";
 
 const mapStateToProps = (state) => {
     return {
@@ -12,6 +12,6 @@ const mapStateToProps = (state) => {
 const PreviewContainer = connect(
     mapStateToProps,
     null,
-)(Preview);
+)(PreviewComponent);
 
 export default PreviewContainer
