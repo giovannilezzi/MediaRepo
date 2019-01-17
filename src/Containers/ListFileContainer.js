@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import * as actionsFile from '../Actions/FileAction';
-import * as actionsImage from '../Actions/ImagesAction';
+import * as actionsImage from '../Actions/AllFileAction';
 
-import ListFile from "../Components/ListFile";
+import ListFileComponent from "../Components/ListFileComponent";
 
 const mapStateToProps = (state) => {
     return {
@@ -13,8 +13,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        asyncCallAllImages: (divId) => {
-            dispatch(actionsImage.asyncCallAllImages(divId));
+        asyncCallAllFiles: (divId) => {
+            dispatch(actionsImage.asyncCallAllFiles(divId));
         },
 
         AsyncCallGetFileById: (id) => {
@@ -26,6 +26,6 @@ const mapDispatchToProps = (dispatch) => {
 const ListFileContainer = connect(
     mapStateToProps,
     mapDispatchToProps,
-)(ListFile);
+)(ListFileComponent);
 
 export default ListFileContainer

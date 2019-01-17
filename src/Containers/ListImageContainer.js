@@ -3,7 +3,7 @@ non usato da nessuno
  */
 
 import { connect } from 'react-redux';
-import * as actions from '../Actions/ImagesAction';
+import * as actions from '../Actions/AllFileAction';
 import ListImage from "../Components/ListImage";
 
 const mapStateToProps = (state) => {
@@ -15,8 +15,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        asyncCallAllImages: (divId) => {
-            dispatch(actions.asyncCallAllImages(divId));
+        asyncCallAllFiles: (divId) => {
+            dispatch(actions.asyncCallAllFiles(divId));
         }
     }
 }

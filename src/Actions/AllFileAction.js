@@ -1,7 +1,7 @@
 import axios from "axios";
 import ActionTypes from "./ActionTypes";
 
-export function asyncCallAllImages(divId) {
+export function asyncCallAllFiles(divId) {
     var url = 'http://smart.nbsgroup.it/plugins/com.mattermost.server-getfilesbychannel '
     //'http://smart.nbsgroup.it/plugins/com.mattermost.server-getfilename'
     //'http://localhost:3002/getImage'

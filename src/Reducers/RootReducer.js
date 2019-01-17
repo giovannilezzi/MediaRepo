@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
-import MediaRepoReducer from './MediaRepoReducer'
-import ImagesReducer from './ImagesReducer'
+import UploadFileReducer from './UploadFileReducer'
+import AllFileReducer from './AllFileReducer'
 import FileReducer from './FileReducer'
 
 const RootReducer = combineReducers({
-    MediaRepoReducer,
-    ImagesReducer,
+    MediaRepoReducer: UploadFileReducer,
+    ImagesReducer: AllFileReducer,
     FileReducer
 });
 export default RootReducer

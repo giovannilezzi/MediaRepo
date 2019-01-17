@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import * as actions from '../Actions/MediaRepoAction';
-import MediaRepo from "../Components/MediaRepo";
+import * as actions from '../Actions/UploadFileAction';
+import UploadFileComponent from "../Components/UploadFileComponent";
 
 const mapStateToProps = (state) => {
     return{
@@ -16,9 +16,9 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-const MediaRepoContainer = connect(
+const UploadFileContainer = connect(
     mapStateToProps,
     mapDispatchToProps,
-)(MediaRepo);
+)(UploadFileComponent);
 
-export default MediaRepoContainer
+export default UploadFileContainer

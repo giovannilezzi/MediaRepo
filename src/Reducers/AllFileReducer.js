@@ -7,7 +7,7 @@ const initialState = {
     id: null
 }
 
-const ImagesReducer = (state = initialState , action) => {
+const AllFileReducer = (state = initialState , action) => {
     switch (action.type) {
 
         case ActionTypes.RECEIVED_IMAGES:
@@ -18,4 +18,4 @@ const ImagesReducer = (state = initialState , action) => {
     }
 }
 
-export default ImagesReducer
+export default AllFileReducer

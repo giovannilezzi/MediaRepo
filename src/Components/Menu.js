@@ -3,7 +3,7 @@ import Provider from "react-redux/es/components/Provider";
 import store from "../Store/AppStore";
 import ListFileContainer from "../Containers/ListFileContainer";
 import React from "react";
-import MediaRepoContainer from "../Containers/MediaRepoContainer";
+import UploadFileContainer from "../Containers/UploadFileContainer";
 import $ from 'jquery'
 
 class Menu extends React.Component{
@@ -20,7 +20,7 @@ class Menu extends React.Component{
         ReactDOM.render(
             <Provider store={store}>
                 <div>
-                    <MediaRepoContainer/>
+                    <UploadFileContainer/>
                 </div>
             </Provider>,
             document.getElementById('page'),

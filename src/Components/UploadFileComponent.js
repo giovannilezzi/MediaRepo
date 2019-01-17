@@ -6,7 +6,7 @@ import ListFileContainer from "../Containers/ListFileContainer";
 import { Button } from 'react-bootstrap';
 import $ from 'jquery'
 
-class MediaRepo extends React.Component{
+class UploadFileComponent extends React.Component{
 
     constructor(props) {
         super(props)
@@ -47,4 +47,4 @@ class MediaRepo extends React.Component{
     }
 }
 
-export default MediaRepo
+export default UploadFileComponent

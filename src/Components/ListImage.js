@@ -8,7 +8,7 @@ class ListImage extends React.Component{
     }
 
     componentWillMount() {
-        this.props.asyncCallAllImages('Town Square')
+        this.props.asyncCallAllFiles('Town Square')
     }
 
     render() {

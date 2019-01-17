@@ -1,7 +1,7 @@
 import React from 'react';
 import $ from 'jquery'
 
-class ListFile extends React.Component{
+class ListFileComponent extends React.Component{
 
     constructor(props) {
         super(props);
@@ -14,9 +14,9 @@ class ListFile extends React.Component{
     }
 
     componentWillMount() {
-        this.props.asyncCallAllImages('Town Square')
-        //su mattermost:  this.props.asyncCallAllImages($('#channelHeaderDropdownButton').text())
-      //in local:  this.props.asyncCallAllImages('Town Square')
+        this.props.asyncCallAllFiles('Town Square')
+        //su mattermost:  this.props.asyncCallAllFiles($('#channelHeaderDropdownButton').text())
+      //in local:  this.props.asyncCallAllFiles('Town Square')
     }
 
 
@@ -288,4 +288,4 @@ toggle between hiding and showing the dropdown content */
     }
 }
 
-export default ListFile;
+export default ListFileComponent;

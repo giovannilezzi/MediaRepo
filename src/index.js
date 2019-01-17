@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './Store/AppStore'
-import MediaRepoContainer from "./Containers/MediaRepoContainer";
+import UploadFileContainer from "./Containers/UploadFileContainer";
 import './style.css'
 import Menu from "./Components/Menu";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -26,7 +26,7 @@ ReactDOM.render(
         </div>
 
         <div id="page">
-            <MediaRepoContainer/>
+            <UploadFileContainer/>
         </div>
 
     </Provider>,

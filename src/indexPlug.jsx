@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './Store/AppStore';
-import MediaRepoContainer from './Containers/MediaRepoContainer'
+import UploadFileContainer from './Containers/UploadFileContainer'
 import $ from 'jquery'
 import Menu from "./Components/Menu";
 import './style.css'
@@ -15,7 +15,7 @@ class HelloWorldPlugin {
     initialize(registry)
     {
         registry.registerMainMenuAction (
-            "MediaRepo",
+            "UploadFileComponent",
             () => {
                 $('#post-list').css("overflow-y", "scroll");
                 $('#create_post').css("display", "none")
@@ -34,7 +34,7 @@ class HelloWorldPlugin {
                         </div>
 
                         <div id="page">
-                            <MediaRepoContainer/>
+                            <UploadFileContainer/>
                         </div>
                     </Provider>,
                     document.getElementById('post-list')
