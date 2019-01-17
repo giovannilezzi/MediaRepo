@@ -11,13 +11,11 @@ export function asyncCallAllFiles(divId) {
     var requestBody = {
         Channel: divId
     }
-    console.log(JSON.stringify(requestBody))
     return function (dispatch) {
         axios.post(url, JSON.stringify(requestBody))
             .then((result) => {
                 const response = result.data.Response;
-                console.log(response)
-                dispatch(receivedImages(response))
+                dispatch(receivedAllFiles(response))
             })
             .catch((err) => {
                 console.log("Errore: " + err.response.data)
@@ -25,8 +23,8 @@ export function asyncCallAllFiles(divId) {
     };
 }
 
-export const receivedImages = (obj) => ({
-    type: ActionTypes.RECEIVED_IMAGES,
+export const receivedAllFiles = (obj) => ({
+    type: ActionTypes.RECEIVED_ALL_FILES,
     payload: {
         newValue: obj
     },

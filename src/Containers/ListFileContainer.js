@@ -6,8 +6,8 @@ import ListFileComponent from "../Components/ListFileComponent";
 
 const mapStateToProps = (state) => {
     return {
-        isLoading: state.ImagesReducer.isLoading,
-        listFiles: state.ImagesReducer.listFiles,
+        isLoading: state.AllFileReducer.isLoading,
+        listFiles: state.AllFileReducer.listFiles,
     };
 };
 
@@ -15,10 +15,6 @@ const mapDispatchToProps = (dispatch) => {
     return {
         asyncCallAllFiles: (divId) => {
             dispatch(actionsImage.asyncCallAllFiles(divId));
-        },
-
-        AsyncCallGetFileById: (id) => {
-            dispatch(actionsFile.AsyncCallGetFileById(id));
         }
     }
 }

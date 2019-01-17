@@ -10,7 +10,7 @@ const initialState = {
 const AllFileReducer = (state = initialState , action) => {
     switch (action.type) {
 
-        case ActionTypes.RECEIVED_IMAGES:
+        case ActionTypes.RECEIVED_ALL_FILES:
             return { ...state, listFiles: action.payload.newValue, isLoading: false};
 
         default:

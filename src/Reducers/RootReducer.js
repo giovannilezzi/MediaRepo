@@ -4,8 +4,8 @@ import AllFileReducer from './AllFileReducer'
 import FileReducer from './FileReducer'
 
 const RootReducer = combineReducers({
-    MediaRepoReducer: UploadFileReducer,
-    ImagesReducer: AllFileReducer,
+    UploadFileReducer,
+    AllFileReducer,
     FileReducer
 });
 export default RootReducer

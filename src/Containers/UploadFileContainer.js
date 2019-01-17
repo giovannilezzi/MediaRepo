@@ -4,7 +4,7 @@ import UploadFileComponent from "../Components/UploadFileComponent";
 
 const mapStateToProps = (state) => {
     return{
-        files: state.MediaRepoReducer.files,
+        files: state.UploadFileReducer.files,
     }
 };
 
