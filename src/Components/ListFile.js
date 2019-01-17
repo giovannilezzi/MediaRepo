@@ -243,6 +243,10 @@ toggle between hiding and showing the dropdown content */
                         </div>
                     </div>
 
+                    <input type="search" id="s" name="s" placeholder="Cerca un file..."/>
+                        <input type="submit" id="sub" name="sub" value="Cerca"/>
+
+
                     <h1 className="titolo">Libreria Multimediale</h1></div>
 
                     <div className="tiles-flex">
