@@ -5,7 +5,7 @@ const initialState = {
     responseDelete: null
 }
 
-const DeleteReducer = (state = initialState , action) => {
+const DeleteFileReducer = (state = initialState , action) => {
     switch (action.type) {
 
         case ActionTypes.DELETE_FILE:
@@ -17,4 +17,4 @@ const DeleteReducer = (state = initialState , action) => {
     }
 }
 
-export default DeleteReducer
+export default DeleteFileReducer

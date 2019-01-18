@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import * as actionsFile from '../Actions/FileAction';
-import * as deleteActionsFile from '../Actions/DeleteAction';
+import * as deleteActionsFile from '../Actions/DeleteFileAction';
 
 import FileComponent from "../Components/FileComponent";
 

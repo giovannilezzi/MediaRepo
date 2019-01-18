@@ -413,7 +413,7 @@ ul.topnav li.right {float: right;}
     padding: 16px;
     font-size: 16px;
     border: none;
-    cursor: pointer;
+    cursor: url("https://png.icons8.com/color/filter"), auto;
 }
 
 .dropbtn:hover, .dropbtn:focus {
@@ -456,3 +456,37 @@ ul.topnav li.right {float: right;}
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75) inset;
     margin-left: 10%;
 }
+
+.delete {
+    background: #ff7777;
+    border:none;
+    text-align: center;
+    font-size:15px;
+    padding:10px 25px;
+    border-radius:20px;
+    cursor: pointer;
+    cursor: url("https://png.icons8.com/color/delete"), auto;
+  /*cursor: url("https://i.stack.imgur.com/bUGV0.png"), auto;*/
+    outline: none;
+    color:#fff;
+}
+
+
+.edit {
+    background:#02b3e4;;
+    border:none;
+    text-align: center;
+    font-size:15px;
+    padding:10px 25px;
+    border-radius:20px;
+    cursor: url("https://png.icons8.com/color/edit"), auto;
+    margin-right:auto;
+    outline: none;
+    color:#fff;
+}
+
+.cerca{
+    cursor: url("https://png.icons8.com/color/search"), auto;
+
+}
+

@@ -5,5 +5,6 @@ export default keyMirror({
     FILE: null,
     RECEIVED_ALL_FILES: null,
     RECEIVED_FILE: null,
-    DELETE_FILE: null
+    DELETE_FILE: null,
+    EDIT_FILE: null
 })

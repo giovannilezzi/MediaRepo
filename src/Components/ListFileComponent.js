@@ -155,7 +155,7 @@ toggle between hiding and showing the dropdown content */
                     </div>
 
                     <input type="search" id="s" name="s" placeholder="Cerca un file..."/>
-                        <input type="submit" id="sub" name="sub" value="Cerca"/>
+                        <input type="submit" id="sub" name="sub" className="cerca" value="Cerca"/>
 
 
                     <h1 className="titolo">Libreria Multimediale</h1></div>

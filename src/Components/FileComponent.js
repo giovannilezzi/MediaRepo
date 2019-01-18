@@ -1,6 +1,9 @@
 import React from "react";
 import $ from "jquery";
-
+import ReactDOM from "react-dom";
+import {Provider} from "react-redux";
+import store from "../Store/AppStore";
+import EditFileContainer from '../Containers/EditFileContainer'
 
 class FileComponent extends React.Component{
 
@@ -27,6 +30,15 @@ class FileComponent extends React.Component{
         this.props.deleteFile(requestBody)
     }
 
+    editFile = () => {
+        ReactDOM.render(
+            <Provider store={store}>
+                <EditFileContainer file = {this.props.file} />
+            </Provider>,
+            document.getElementById('page')
+        )
+    }
+
 
 
 
@@ -48,8 +60,11 @@ class FileComponent extends React.Component{
                       <p className=" far fa-file-alt fa-3x"> </p>
               }
 
+              <div className="underFile">
+                  <button onClick={this.editFile} className="edit"> edit </button>
+                  <button onClick={this.deleteFile} className="delete"> delete </button>
+              </div>
 
-              <button onClick={this.deleteFile} className="deleteFile"> delete </button>
           </a>
           )
 
