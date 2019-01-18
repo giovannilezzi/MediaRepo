@@ -9,36 +9,31 @@ class FileComponent extends React.Component{
     }
 
     viewFile = () => {
-      //  this.props.AsyncCallGetFileById(this.props.file.Id)
-       var that = this
+        this.props.AsyncCallGetFileById(this.props.file.Id)
+     /*  var that = this
         $('a.tile').on('click', function (e) {
             e.preventDefault();
             var id = $(this).attr('id');
             that.props.AsyncCallGetFileById(id)
             //that.props.saveFile(that.props.listFiles[id-1])
-        });
-        $('li.pdf').on('click', function (e) {
-            e.preventDefault();
-            var id = $(this).attr('id');
-            that.props.AsyncCallGetFileById(id)
-            //that.props.saveFile(that.props.listFiles[id-1])
-        });
-        $('li.file').on('click', function (e) {
-            e.preventDefault();
-            var id = $(this).attr('id');
-            that.props.AsyncCallGetFileById(id)
-            //that.props.saveFile(that.props.listFiles[id-1])
-        });
+        });*/
+    }
+
+    deleteFile = () =>{
+        $("#" + this.props.file.Id).remove();
+        const requestBody = {
+            Id: this.props.file.Id
+        }
+        this.props.deleteFile(requestBody)
     }
 
 
 
 
     render() {
-        console.log(this.props)
       return(
-          <a className="tile" id={this.props.file.Id} onClick={this.viewFile}  key={this.props.file.Id}>
-              <h2 className="tile-description">{this.props.file.Name}</h2>
+          <a className="tile" id={this.props.file.Id}   key={this.props.file.Id}>
+              <h2 className="tile-description" onClick={this.viewFile}  id={this.props.file.Id} >{this.props.file.Name}</h2>
               <div className="tile-divider"></div>
               {
                   this.props.file.MimeType=='data:image/png;base64,' || this.props.file.MimeType=='data:image/jpeg;base64,'?
@@ -54,7 +49,7 @@ class FileComponent extends React.Component{
               }
 
 
-              <button> delete</button>
+              <button onClick={this.deleteFile} className="deleteFile"> delete </button>
           </a>
           )
 
