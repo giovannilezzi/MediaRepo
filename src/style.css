@@ -89,11 +89,13 @@ input[type="file"] {
 }
 .custom-file-upload {
   /*  border: 3px solid #000000;*/
-    display: inline-block;
+    margin-left: 5%;
+    display: inline;
     margin-top: -2%;
     padding: 2% 2%;
+   // cursor: url("https://png.icons8.com/color/upload"), auto;
     cursor: pointer;
-    position: center;
+    position: absolute;
 }
 
 /* scrollable div*/
@@ -454,7 +456,8 @@ ul.topnav li.right {float: right;}
     -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75) inset;
     -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75) inset;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75) inset;
-    margin-left: 10%;
+    position: relative;
+    margin-left: 20%;
 }
 
 .delete {
@@ -487,6 +490,171 @@ ul.topnav li.right {float: right;}
 
 .cerca{
     cursor: url("https://png.icons8.com/color/search"), auto;
+}
+
+.opzioni{
+    margin-top: 2%;
+    margin-left: 20%;
+    position: relative;
+}
+
+
+
+/*-------------------------*/
+/* reset stili */
+
+.FiltraName{
+    width: 150px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* lista orizzontale */
+
+#menufiltra {
+    display: inline-block;
+    position: absolute;
+    width: 150px;
+}
+
+/* menu */
+
+#menufiltra {
+    position: center;
+    background-color: #48ff43;
+    background: -moz-linear-gradient(#c4fff5, #dcfffc); /* firefox*/
+    background: linear-gradient(#c4fff5, #dcfffc);
+    border: 1px solid #1032e7;
+    border-radius: 6px;
+    box-shadow: 1px 1px 4px #1862f1;
+    text-align: center;
 
 }
 
+/* links */
+
+.lilista .filtraggio {
+    display: block;
+    padding: 12px 20px;
+    width: 150px;
+    color: #7af11f;
+    text-transform: uppercase;
+    font: bold 0.7em Arial, Helvetica;
+    text-decoration: none;
+    text-shadow: 0 1px #000000;
+    border-right: 1px solid #222;
+    box-shadow: 1px 0 #444;
+}
+
+
+
+/* links hover */
+
+.filtraggio:hover {
+    color: #f12a2d;
+}
+/* sub menu */
+
+#menufiltra .lilista .hidden {
+    display: inline-block;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    background-color: #dbfffa;
+    opacity: 0.5;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+/* links sub menu */
+
+#menufiltra .lilista .hidden .lilista a {
+    width: 100px;
+    margin-left: 300px;
+    border-bottom: 1px solid #202020;
+    border-right: none;
+    box-shadow: none;
+}
+/* menu hover */
+
+#menufiltra .lilista:hover .hidden {
+    margin-top: -65px;
+    opacity: 1;
+    -webkit-transition: all 0.5s ease; /* safari and chrome */
+    -moz-transition: all 0.5s ease; /* firefox */
+    -o-transition: all 0.5s ease; /* opera */
+    transition: all 0.5s ease;
+    visibility: visible;
+    cursor: pointer;
+}
+
+.lilista{
+    width: 10%;
+}
+
+.menuOpzioni{
+    margin-left: -5%;
+}
+
+
+
+
+/* Aggiunta del bottone per upload di un file*/
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.up {
+    border: 2px solid #060e44;
+    color: #000000;
+    background-color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: cell;
+
+}
+
+.upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+@media screen and (max-width: 1100px) {
+    .up{
+        color: #f12a2d;
+        margin-left: 0px; }
+}
+
+@media screen and (max-width: 1100px) {
+    #menufiltra {
+        display: inline-block;
+        position: absolute;
+        width: 150px;
+        margin-left: 25%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    #s {
+        -moz-border-radius: 14px;
+        -webkit-border-radius: 14px;
+        border-radius: 14px;
+        -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75) inset;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75) inset;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75) inset;
+        position: relative;
+        margin-top: 20%;
+        margin-left: -10%;
+    }
+}

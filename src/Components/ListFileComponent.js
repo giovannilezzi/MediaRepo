@@ -2,6 +2,7 @@ import React from 'react';
 import $ from 'jquery'
 import FileComponent from "./FileComponent";
 import FileContainer from '../Containers/FileContainer'
+import UploadFileContainer from "../Containers/UploadFileContainer";
 
 class ListFileComponent extends React.Component{
 
@@ -16,7 +17,7 @@ class ListFileComponent extends React.Component{
     }
 
     componentWillMount() {
-        this.props.asyncCallAllFiles('Town Square')
+
         //su mattermost:  this.props.asyncCallAllFiles($('#channelHeaderDropdownButton').text())
       //in local:  this.props.asyncCallAllFiles('Town Square')
     }
@@ -85,6 +86,7 @@ toggle between hiding and showing the dropdown content */
 
 
     render() {
+        this.props.asyncCallAllFiles('Town Square')
         let listImage = [];
         let image = [];
         let pdf = [];
@@ -142,20 +144,32 @@ toggle between hiding and showing the dropdown content */
 
         return (
             <div>
-                <div>
-                    <div className="dropdown">
-                        <button onClick={this.dropdownMenu} className="dropbtn">Filtra</button>
-                        <div id="myDropdown" className="dropdown-content">
-                            <a onClick={this.filterImage}>Immagini</a>
-                            <a onClick={this.filterPdf}>PDF</a>
-                            <a onClick={this.filterTesti}>Testo</a>
-                            <a onClick={this.filterAltri}>Altri</a>
-                            <a onClick={this.resetFilter}>Resetta</a>
+                <div className="menuOpzioni">
+                    <UploadFileContainer/>
+                    <div className="opzioni">
+
+
+
+                        <div>
+
+                                <ul id="menufiltra">
+                                    <li className="lilista"><a className="FiltraName filtraggio">Filtra</a>
+                                        <ul className="hidden">
+                                            <li> <a className="filtraggio" onClick={this.filterImage}>Immagini</a></li>
+                                            <li> <a className="filtraggio" onClick={this.filterPdf}>PDF</a></li>
+                                            <li> <a className="filtraggio" onClick={this.filterTesti}>Testo</a></li>
+                                            <li> <a className="filtraggio" onClick={this.filterAltri}>Altri</a></li>
+                                            <li> <a className="filtraggio" onClick={this.resetFilter}>Resetta</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <input type="search" id="s" name="s" placeholder="Cerca un file..."/>
+                                <input type="submit" id="sub" name="sub" className="cerca" value="Cerca"/>
                         </div>
+
+
                     </div>
 
-                    <input type="search" id="s" name="s" placeholder="Cerca un file..."/>
-                        <input type="submit" id="sub" name="sub" className="cerca" value="Cerca"/>
 
 
                     <h1 className="titolo">Libreria Multimediale</h1></div>

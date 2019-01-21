@@ -23,7 +23,7 @@ class FileComponent extends React.Component{
     }
 
     deleteFile = () =>{
-        $("#" + this.props.file.Id).remove();
+      //  $("#" + this.props.file.Id).remove();
         const requestBody = {
             Id: this.props.file.Id
         }
