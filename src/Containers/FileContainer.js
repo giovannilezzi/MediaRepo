@@ -16,8 +16,8 @@ const mapDispatchToProps = (dispatch) => {
         AsyncCallGetFileById: (id) => {
             dispatch(actionsFile.AsyncCallGetFileById(id));
         },
-        deleteFile: (requestBody) =>{
-            dispatch(deleteActionsFile.asyncCallDeleteFile(requestBody))
+        deleteFile: (id, requestBody) =>{
+            dispatch(deleteActionsFile.asyncCallDeleteFile(id, requestBody))
         }
     }
 }

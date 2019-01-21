@@ -4,6 +4,8 @@ import AllFileReducer from './AllFileReducer'
 import FileReducer from './FileReducer'
 import DeleteFileReducer from './DeleteFileReducer'
 import EditFileReducer from './EditFileReducer'
+import SearchReducer from './SearchReducer'
+
 
 
 
@@ -12,6 +14,7 @@ const RootReducer = combineReducers({
     AllFileReducer,
     FileReducer,
     DeleteReducer: DeleteFileReducer,
-    EditReducer: EditFileReducer
+    EditReducer: EditFileReducer,
+    SearchReducer
 });
 export default RootReducer

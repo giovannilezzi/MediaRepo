@@ -17,18 +17,13 @@ class ListFileComponent extends React.Component{
     }
 
     componentWillMount() {
-
+        this.props.asyncCallAllFiles('Town Square')
         //su mattermost:  this.props.asyncCallAllFiles($('#channelHeaderDropdownButton').text())
       //in local:  this.props.asyncCallAllFiles('Town Square')
     }
 
 
-    //Dall'array di tutti i file, si va a trovare quello con il nome inserito nell'input. In caso positivo si
-    // mostra solo il file cercato, in caso negativo si mostrano tutti con una stampa di alert.
-    searchFile = () =>{
 
-
-    }
 
     //Dall'array dei files, si vanno a cercare solo i files con l'estenzione relatica al filtraggio selezionato dal menu a tendina.
     filterImage = () =>{
@@ -85,13 +80,43 @@ toggle between hiding and showing the dropdown content */
     }
 
 
+
+    searchFile = (e) => {
+        this.setState({
+            searching: true
+        })
+
+        e.preventDefault();
+        const requestBody = {
+            Name: this.getTitle.value,
+            Channel: "Town Square"
+        }
+        console.log(this.getTitle.value)
+        this.props.searchFile(requestBody)
+
+    }
+
+
+
     render() {
-        this.props.asyncCallAllFiles('Town Square')
+    //    this.props.asyncCallAllFiles('Town Square')
         let listImage = [];
+        let listSearching = [];
         let image = [];
         let pdf = [];
         let testi = [];
         let altri = [];
+
+        if(this.props.searchFileResponse && this.props.isSearching){
+            console.log("booleana" + this.props.isSearching)
+            for(var i = 0; i<this.props.searchFileResponse.length; i++) {
+                listSearching.push(
+                    <FileContainer file={this.props.searchFileResponse[i]} key={this.props.searchFileResponse[i].Id}/>
+                )
+                console.log(this.props.searchFileResponse)
+            }
+        }
+
 
 
         if (this.props.listFiles && !this.props.isLoading) {
@@ -142,6 +167,7 @@ toggle between hiding and showing the dropdown content */
                               < div  id = "loader"></div>
                       </div>
 
+
         return (
             <div>
                 <div className="menuOpzioni">
@@ -163,8 +189,9 @@ toggle between hiding and showing the dropdown content */
                                         </ul>
                                     </li>
                                 </ul>
-                                <input type="search" id="s" name="s" placeholder="Cerca un file..."/>
-                                <input type="submit" id="sub" name="sub" className="cerca" value="Cerca"/>
+                                <input type="search" id="s" name="s" placeholder="Cerca un file..." ref={(input) => this.getTitle = input} onChange={this.searchFile}/>
+                                <input type="submit" id="sub" name="sub" className="cerca" />
+
                         </div>
 
 
@@ -176,6 +203,10 @@ toggle between hiding and showing the dropdown content */
 
                     <div className="tiles-flex">
                          {
+                             this.state.searching?
+                                 listSearching
+                                 :
+
                              this.state.imageClicked?
                                  image
                                  :
@@ -193,6 +224,7 @@ toggle between hiding and showing the dropdown content */
                                 :
                                 listImage
                         }
+
                      </div>
             </div>
         )
