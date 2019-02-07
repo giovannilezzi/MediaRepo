@@ -3,7 +3,7 @@ import ActionTypes from "./ActionTypes";
 
 export function asyncCallDeleteFile(data) {
    // var url = 'http://smart.nbsgroup.it/plugins/com.mattermost.server-getfilebyid'
-    var url = 'http://localhost:3002/deleteFile'
+    var url = 'https://localhost:3002/deleteFile'
 
     return function (dispatch) {
         axios.post(url, JSON.stringify(data))

@@ -2,7 +2,7 @@ import axios from "axios";
 import ActionTypes from "./ActionTypes";
 
 export function asyncCallGetSearhFiles(requestBody) {
-    var url = 'http://localhost:3002/searchFile'
+    var url = 'https://localhost:3002/searchFile'
 
     return function (dispatch) {
         axios.post(url, JSON.stringify(requestBody))

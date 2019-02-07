@@ -93,7 +93,7 @@ input[type="file"] {
     display: inline;
     margin-top: -2%;
     padding: 2% 2%;
-   // cursor: url("https://png.icons8.com/color/upload"), auto;
+   /* cursor: url("https://png.icons8.com/color/upload"), auto;*/
     cursor: pointer;
     position: absolute;
 }
