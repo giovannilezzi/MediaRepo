@@ -23,6 +23,10 @@ class ListFileComponent extends React.Component{
     }
 
 
+    disableMenu = () => {
+        var element = document.getElementById("idlista");
+        element.classList.remove("mystyle");
+    }
 
 
     //Dall'array dei files, si vanno a cercare solo i files con l'estenzione relatica al filtraggio selezionato dal menu a tendina.
@@ -33,6 +37,8 @@ class ListFileComponent extends React.Component{
             pdfClicked: false,
             altriClicked: false
         })
+        this.disableMenu()
+
     }
 
     filterPdf = () =>{
@@ -42,6 +48,8 @@ class ListFileComponent extends React.Component{
             imageClicked: false,
             altriClicked: false
         })
+        this.disableMenu()
+
     }
 
     filterTesti = () =>{
@@ -51,6 +59,8 @@ class ListFileComponent extends React.Component{
             imageClicked: false,
             altriClicked: false
         })
+        this.disableMenu()
+
     }
 
     filterAltri = () =>{
@@ -60,6 +70,8 @@ class ListFileComponent extends React.Component{
             pdfClicked: false,
             imageClicked: false
         })
+        this.disableMenu()
+
     }
 
     resetFilter = () =>{
@@ -70,6 +82,8 @@ class ListFileComponent extends React.Component{
             altriClicked: false
 
         })
+        this.disableMenu()
+
     }
 
 
@@ -96,6 +110,10 @@ toggle between hiding and showing the dropdown content */
 
     }
 
+    visibleMenu = ( ) => {
+        var element = document.getElementById("idlista");
+        element.classList.add("mystyle");
+    }
 
 
     render() {
@@ -168,6 +186,7 @@ toggle between hiding and showing the dropdown content */
                       </div>
 
 
+
         return (
             <div>
                 <div className="menuOpzioni">
@@ -179,7 +198,7 @@ toggle between hiding and showing the dropdown content */
                         <div>
 
                                 <ul id="menufiltra">
-                                    <li className="lilista"><a className="FiltraName filtraggio">Filtra</a>
+                                    <li id="idlista" className="lilista"><a className="FiltraName filtraggio" onClick={this.visibleMenu}>Filtra</a>
                                         <ul className="hidden">
                                             <li> <a className="filtraggio" onClick={this.filterImage}>Immagini</a></li>
                                             <li> <a className="filtraggio" onClick={this.filterPdf}>PDF</a></li>
