@@ -19,6 +19,10 @@ class ListFileComponent extends React.Component{
     }
 
 
+    disableMenu = () => {
+        var element = document.getElementById("idlista");
+        element.classList.remove("mystyle");
+    }
 
 
     disableMenu = () => {
@@ -112,6 +116,10 @@ toggle between hiding and showing the dropdown content */
 
     }
 
+    visibleMenu = ( ) => {
+        var element = document.getElementById("idlista");
+        element.classList.add("mystyle");
+    }
 
 
     render() {
@@ -188,6 +196,7 @@ toggle between hiding and showing the dropdown content */
                       <div id = "loader-wrapper"> <br/> <br/> <br/> <h1>Loading ...</h1>
                               < div  id = "loader"></div>
                       </div>
+
 
 
         return (

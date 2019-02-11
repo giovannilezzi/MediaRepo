@@ -85,7 +85,7 @@ input[type="file"] {
     display: inline;
     margin-top: -2%;
     padding: 2% 2%;
-   // cursor: url("https://png.icons8.com/color/upload"), auto;
+   /* cursor: url("https://png.icons8.com/color/upload"), auto;*/
     cursor: pointer;
     position: absolute;
 }
@@ -235,7 +235,6 @@ ul.topnav {
     padding: 0;
 
     margin-top: 50px;
-    overflow: hidden;
     background-color: #153E7E;
 }
 
@@ -563,6 +562,7 @@ ul {
     visibility: visible;
     cursor: pointer;
 }
+
 
 .lilista{
     width: 10%;
