@@ -1,6 +1,5 @@
 import React from 'react';
 import $ from 'jquery'
-import FileComponent from "./FileComponent";
 import FileContainer from '../Containers/FileContainer'
 import UploadFileContainer from "../Containers/UploadFileContainer";
 
@@ -17,12 +16,15 @@ class ListFileComponent extends React.Component{
     }
 
     componentWillMount() {
-        this.props.asyncCallAllFiles('Town Square')
-        //su mattermost:  this.props.asyncCallAllFiles($('#channelHeaderDropdownButton').text())
-      //in local:  this.props.asyncCallAllFiles('Town Square')
     }
 
 
+
+
+    disableMenu = () => {
+        var element = document.getElementById("idlista");
+        element.classList.remove("mystyle");
+    }
 
 
     //Dall'array dei files, si vanno a cercare solo i files con l'estenzione relatica al filtraggio selezionato dal menu a tendina.
@@ -33,6 +35,8 @@ class ListFileComponent extends React.Component{
             pdfClicked: false,
             altriClicked: false
         })
+        this.disableMenu()
+
     }
 
     filterPdf = () =>{
@@ -42,6 +46,8 @@ class ListFileComponent extends React.Component{
             imageClicked: false,
             altriClicked: false
         })
+        this.disableMenu()
+
     }
 
     filterTesti = () =>{
@@ -51,6 +57,8 @@ class ListFileComponent extends React.Component{
             imageClicked: false,
             altriClicked: false
         })
+        this.disableMenu()
+
     }
 
     filterAltri = () =>{
@@ -60,6 +68,8 @@ class ListFileComponent extends React.Component{
             pdfClicked: false,
             imageClicked: false
         })
+        this.disableMenu()
+
     }
 
     resetFilter = () =>{
@@ -70,8 +80,14 @@ class ListFileComponent extends React.Component{
             altriClicked: false
 
         })
+        this.disableMenu()
+
     }
 
+    visibleMenu = ( ) => {
+        var element = document.getElementById("idlista");
+        element.classList.add("mystyle");
+    }
 
     /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
@@ -99,7 +115,13 @@ toggle between hiding and showing the dropdown content */
 
 
     render() {
-    //    this.props.asyncCallAllFiles('Town Square')
+    //    this.props.asyncCallAllFiles('Town Square')+
+        console.log(this.props.allFilesLoaded)
+        if (!this.props.allFilesLoaded) {
+            this.props.asyncCallAllFiles('Town Square')
+        }
+        //su mattermost:  this.props.asyncCallAllFiles($('#channelHeaderDropdownButton').text())
+        //in local:  this.props.asyncCallAllFiles('Town Square')
         let listImage = [];
         let listSearching = [];
         let image = [];
@@ -179,7 +201,7 @@ toggle between hiding and showing the dropdown content */
                         <div>
 
                                 <ul id="menufiltra">
-                                    <li className="lilista"><a className="FiltraName filtraggio">Filtra</a>
+                                    <li id="idlista" className="lilista"><a className="FiltraName filtraggio" onClick={this.visibleMenu}>Filtra</a>
                                         <ul className="hidden">
                                             <li> <a className="filtraggio" onClick={this.filterImage}>Immagini</a></li>
                                             <li> <a className="filtraggio" onClick={this.filterPdf}>PDF</a></li>

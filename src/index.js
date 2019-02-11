@@ -2,13 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './Store/AppStore'
-import UploadFileContainer from "./Containers/UploadFileContainer";
+import ListFileContainer from "./Containers/ListFileContainer";
 import './style.css'
-import Menu from "./Components/Menu";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import $ from "jquery";
-
-
 
 var link = $('<link/>', {
     rel: 'stylesheet',
@@ -21,15 +18,9 @@ $('head').prepend(link);
 
 ReactDOM.render(
     <Provider store={store}>
-        <div>
-            <Menu/>
-        </div>
-
         <div id="page">
-            <UploadFileContainer/>
+            <ListFileContainer/>
         </div>
-
     </Provider>,
-
     document.getElementById('root'),
 );

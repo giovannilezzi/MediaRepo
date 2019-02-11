@@ -2,8 +2,8 @@ import axios from "axios";
 import ActionTypes from "./ActionTypes";
 
 export function asyncCallEditFile(data) {
-    // var url = 'http://smart.nbsgroup.it/plugins/com.mattermost.server-getfilebyid'
-    var url = 'http://localhost:3002/editFile'
+    var url = 'https://smart.nbsgroup.it/plugins/com.mattermost.server-dbeditfile'
+    //var url = 'http://localhost:3002/editFile'
 
     return function (dispatch) {
         axios.post(url, JSON.stringify(data))

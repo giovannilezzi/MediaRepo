@@ -15,7 +15,7 @@ class HelloWorldPlugin {
     initialize(registry)
     {
         registry.registerMainMenuAction (
-            "UploadFileComponent",
+            "MediaRepo",
             () => {
                 $('#post-list').css("overflow-y", "scroll");
                 $('#create_post').css("display", "none")

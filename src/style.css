@@ -12,7 +12,6 @@
     font-size: 16px;
 }
 
-
 .section{
     margin-left: 10%;
     margin-top: 0px;
@@ -21,13 +20,11 @@
     position: absolute;
 }
 
-
 .File{
     width: 100% !important;
     height: 100% !important;
     position: absolute;
 }
-
 
 .files{
     border: 5px solid #153E7E;
@@ -36,7 +33,6 @@
     width: 90%;
     height: 90%;
 }
-
 
 .image{
     border: 5px solid #153E7E;
@@ -48,7 +44,6 @@
     height: 50%;
     cursor: pointer;
 }
-
 
 .pdf{
     border: 5px solid #153E7E;
@@ -72,7 +67,6 @@
     cursor: pointer;
 }
 
-
 .link{
     text-decoration: underline;
     font-size: 4vw;
@@ -81,12 +75,10 @@
     cursor: pointer;
 }
 
-
-
-
 input[type="file"] {
     display: none;
 }
+
 .custom-file-upload {
   /*  border: 3px solid #000000;*/
     margin-left: 5%;
@@ -111,12 +103,9 @@ html, #root {
     height: calc(100% - 132px);
 }
 
-
 #answerform{
     overflow-y: scroll;
 }
-
-
 
 #loader-wrapper {
     position: fixed;
@@ -126,6 +115,7 @@ html, #root {
     height: 100%;
     z-index: 1000;
 }
+
 #loader {
     display: block;
     position: relative;
@@ -181,6 +171,7 @@ html, #root {
         transform: rotate(360deg); /* Firefox 16+, IE 10+, Opera */
     }
 }
+
 @keyframes spin {
     0% {
         -webkit-transform: rotate(0deg); /* Chrome, Opera 15+, Safari 3.1+ */
@@ -194,16 +185,11 @@ html, #root {
     }
 }
 
-
-
-
 .topnav{
     list-style-type: none;
     overflow: hidden;
     background-color: #153E7E;
 }
-
-
 
 .menuover {
     float: left;
@@ -215,7 +201,6 @@ html, #root {
     text-align: center;
     text-decoration: none;
 }
-
 
 .amenuover {
     display: block;
@@ -235,10 +220,7 @@ html, #root {
     color: black;
 }
 
-
-
-
-/*Drop Menu*/
+/*Menu */
 .topnav {
     box-sizing: border-box;
     font-size: 90.5%;
@@ -246,11 +228,6 @@ html, #root {
     margin: 0;
     box-sizing: inherit;
 }
-
-
-
-
-/*Menu */
 
 ul.topnav {
     list-style-type: none;
@@ -288,8 +265,6 @@ ul.topnav li.right {float: right;}
     ul.topnav li.right,
     ul.topnav li {float: none;}
 }
-
-
 
 /*Barra caricamento file Gestita solo da css */
 .titolo {
@@ -406,8 +381,6 @@ ul.topnav li.right {float: right;}
     justify-content: space-around;
 }
 
-
-
 /*CSS per menu a tendina*/
 .dropbtn {
     background-color: #3498DB;
@@ -447,7 +420,6 @@ ul.topnav li.right {float: right;}
 .dropdown a:hover {background-color: #ddd;}
 
 .show {display: block;}
-
 
 #s {
     -moz-border-radius: 14px;
@@ -581,7 +553,7 @@ ul {
 }
 /* menu hover */
 
-#menufiltra .lilista:hover .hidden {
+#menufiltra .mystyle .hidden {
     margin-top: -65px;
     opacity: 1;
     -webkit-transition: all 0.5s ease; /* safari and chrome */

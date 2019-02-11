@@ -2,9 +2,9 @@ import axios from "axios";
 import ActionTypes from "./ActionTypes";
 
 export function AsyncCallGetFileById(id) {
-   // var url = 'http://smart.nbsgroup.it/plugins/com.mattermost.server-getfilebyid'
+   var url = 'https://smart.nbsgroup.it/plugins/com.mattermost.server-dbgetfilebyid'
     //'http://smart.nbsgroup.it/plugins/com.mattermost.server-dbgetimagebyid'
-   var url = 'http://localhost:3002/getFileById'
+    // var url = 'http://localhost:3002/getFileById'
     //'http://smart.nbsgroup.it/plugins/com.mattermost.server-dblistimage'
     //'http://172.18.50.67:8065/plugins/com.mattermost.server-dblistimage'
     //http://localhost:3001/getImage

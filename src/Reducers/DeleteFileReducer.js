@@ -9,7 +9,6 @@ const DeleteFileReducer = (state = initialState , action) => {
     switch (action.type) {
 
         case ActionTypes.DELETE_FILE:
-
             return { ...state, responseDelete: action.payload.newValue};
 
         default:

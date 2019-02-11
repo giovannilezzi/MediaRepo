@@ -16,7 +16,6 @@ class EditFileComponent extends Component {
                 <form className="form" onSubmit={this.handleEditFile}>
                     <input required type="text" ref={(input) => this.getName = input}
                            defaultValue={this.props.file.Name} placeholder="Enter new File Name" /><br /><br />
-
                     <button>Update</button>
                 </form>
             </div>

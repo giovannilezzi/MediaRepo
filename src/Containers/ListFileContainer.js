@@ -9,7 +9,8 @@ const mapStateToProps = (state) => {
         isLoading: state.AllFileReducer.isLoading,
         listFiles: state.AllFileReducer.listFiles,
         searchFileResponse: state.SearchReducer.searchFileResponse,
-        isSearching: state.SearchReducer.isSearching
+        isSearching: state.SearchReducer.isSearching,
+        allFilesLoaded: state.AllFileReducer.allFilesLoaded
     };
 };
 
