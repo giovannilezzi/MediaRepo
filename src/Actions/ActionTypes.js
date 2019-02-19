@@ -7,5 +7,7 @@ export default keyMirror({
     RECEIVED_FILE: null,
     DELETE_FILE: null,
     EDIT_FILE: null,
-    SEARCH_FILE: null
+    SEARCH_FILE: null,
+    SAVE_FILE_TO_EDIT: null,
+    CLOSE_EDIT_FILE: null
 })

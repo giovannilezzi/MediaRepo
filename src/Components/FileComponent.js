@@ -23,13 +23,15 @@ class FileComponent extends React.Component{
     }
 
     editFile = () => {
-        console.log(this.props.file)
+        /*
         ReactDOM.render(
             <Provider store={store}>
                 <EditFileContainer file = {this.props.file} />
             </Provider>,
             document.getElementById('root')
-        )
+        )*/
+        this.props.saveFileToEdit(this.props.file)
+
     }
 
     render() {

@@ -10,14 +10,20 @@ class EditFileComponent extends Component {
         this.props.handleEditFile(requestBody)
     }
 
+    closeEditFile = () => {
+        this.props.closeEditFile()
+    }
+
     render() {
         return (
-            <div key={this.props.file.Id} className="post">
-                <form className="form" onSubmit={this.handleEditFile}>
-                    <input required type="text" ref={(input) => this.getName = input}
-                           defaultValue={this.props.file.Name} placeholder="Enter new File Name" /><br /><br />
-                    <button>Update</button>
-                </form>
+            <div className="myPost">
+                <div className="myOpacity"></div>
+                <div className="myForm">
+                   <input required type="text" ref={(input) => this.getName = input}
+                          defaultValue={this.props.file.Name} placeholder="Enter new File Name" /><br /><br />
+                   <button onClick={this.handleEditFile}> Update </button>
+                   <button onClick={this.closeEditFile}> Close </button>
+                </div>
             </div>
         );
     }

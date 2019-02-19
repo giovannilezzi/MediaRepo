@@ -10,8 +10,12 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        handleEditFile: (file) => {
-            dispatch(actions.asyncCallEditFile(file));
+        handleEditFile: (requestBody) => {
+            dispatch(actions.asyncCallEditFile(requestBody));
+        },
+
+        closeEditFile: () => {
+            dispatch(actions.closeEditFile());
         }
     }
 }

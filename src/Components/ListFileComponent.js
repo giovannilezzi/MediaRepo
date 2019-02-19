@@ -230,7 +230,8 @@ class ListFileComponent extends React.Component{
                     }
                  </div>
             </div>
-        )
+
+    )
     }
 }
 export default ListFileComponent;

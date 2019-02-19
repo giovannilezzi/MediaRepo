@@ -13,15 +13,7 @@ const EditFileReducer = (state = initialState , action) => {
     switch (action.type) {
 
         case ActionTypes.EDIT_FILE:
-            ReactDOM.render(
-                <Provider store={store}>
-                    <div>
-                        <ListFileContainer/>
-                    </div>
-                </Provider>,
-                document.getElementById('page'),
-            );
-            return { ...state, responseEdit: action.payload.newValue};
+           return { ...state, responseEdit: action.payload.newValue};
 
         default:
             return state;

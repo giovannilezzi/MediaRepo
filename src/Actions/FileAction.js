@@ -30,3 +30,10 @@ export const receivedFile = (obj) => ({
         newValue: obj
     },
 });
+
+export const saveFileToEdit = (obj) => ({
+    type: ActionTypes.SAVE_FILE_TO_EDIT,
+    payload: {
+        newValue: obj
+    },
+});

@@ -18,6 +18,9 @@ const mapDispatchToProps = (dispatch) => {
         },
         deleteFile: (requestBody) =>{
             dispatch(deleteActionsFile.asyncCallDeleteFile(requestBody))
+        },
+        saveFileToEdit: (file) =>{
+            dispatch(actionsFile.saveFileToEdit(file))
         }
     }
 }

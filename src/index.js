@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './Store/AppStore'
-import ListFileContainer from "./Containers/ListFileContainer";
+import AppContainer from "./Containers/AppContainer";
 import './style.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import $ from "jquery";
@@ -18,7 +18,7 @@ $('head').prepend(link);
 
 ReactDOM.render(
     <Provider store={store}>
-            <ListFileContainer/>
+        <AppContainer/>
     </Provider>,
     document.getElementById('root'),
-);
+)

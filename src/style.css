@@ -21,9 +21,11 @@
 }
 
 .File{
-    width: 100% !important;
-    height: 100% !important;
+    z-index: 10;
     position: absolute;
+    max-width: 80%;
+    background: white;
+    top: 10%;
 }
 
 .files{
@@ -631,4 +633,53 @@ ul {
 
 .firstDiv{
     margin-top: 10%;
+}
+
+
+#appPreview {
+    width: 100px;
+    height: 100px;
+}
+#navi, .preview {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.preview {
+    z-index: 10;
+}
+
+.myForm {
+    z-index: 10;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    background: white;
+    width: 60%;
+}
+
+.myPost {
+    width: 100%;
+    height: 100%
+}
+
+.myOpacity {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,1);
+    opacity: 0.5;
+
+}
+
+.myFile {
+    width: 100%;
+    height: 100%;
+}
+
+.centerFile {
+    margin: 0 auto;
+    width: 600px;
 }
