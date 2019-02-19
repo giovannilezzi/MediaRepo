@@ -19,7 +19,11 @@ const AllFileReducer = (state = initialState , action) => {
 
             case ActionTypes.DELETE_FILE:
             return { ...state, allFilesLoaded: false};
+
+        case ActionTypes.RECEIVED_RESPONSE:
+            return {...state, allFilesLoaded: false};
         default:
+
             return state;
     }
 }

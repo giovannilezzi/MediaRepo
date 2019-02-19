@@ -18,18 +18,15 @@ class ListFileComponent extends React.Component{
     componentWillMount() {
     }
 
-
     disableMenu = () => {
         var element = document.getElementById("idlista");
         element.classList.remove("mystyle");
     }
 
-
     disableMenu = () => {
         var element = document.getElementById("idlista");
         element.classList.remove("mystyle");
     }
-
 
     //Dall'array dei files, si vanno a cercare solo i files con l'estenzione relatica al filtraggio selezionato dal menu a tendina.
     filterImage = () =>{
@@ -92,9 +89,8 @@ class ListFileComponent extends React.Component{
         var element = document.getElementById("idlista");
         element.classList.add("mystyle");
     }
-
     /* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
+    toggle between hiding and showing the dropdown content */
     dropdownMenu = () => {
         document.getElementById("myDropdown").classList.toggle("show");
     }
@@ -124,7 +120,6 @@ toggle between hiding and showing the dropdown content */
 
     render() {
     //    this.props.asyncCallAllFiles('Town Square')+
-        console.log(this.props.allFilesLoaded)
         if (!this.props.allFilesLoaded) {
             this.props.asyncCallAllFiles('Town Square')
         }
@@ -138,7 +133,6 @@ toggle between hiding and showing the dropdown content */
         let altri = [];
 
         if(this.props.searchFileResponse && this.props.isSearching){
-            console.log("booleana" + this.props.isSearching)
             for(var i = 0; i<this.props.searchFileResponse.length; i++) {
                 listSearching.push(
                     <FileContainer file={this.props.searchFileResponse[i]} key={this.props.searchFileResponse[i].Id}/>
@@ -146,8 +140,6 @@ toggle between hiding and showing the dropdown content */
                 console.log(this.props.searchFileResponse)
             }
         }
-
-
 
         if (this.props.listFiles && !this.props.isLoading) {
             for(var i = 0; i<this.props.listFiles.length; i++){
@@ -188,7 +180,6 @@ toggle between hiding and showing the dropdown content */
                     )
                 }
             }
-
         }
         else
             listImage =
@@ -196,70 +187,50 @@ toggle between hiding and showing the dropdown content */
                       <div id = "loader-wrapper"> <br/> <br/> <br/> <h1>Loading ...</h1>
                               < div  id = "loader"></div>
                       </div>
-
-
-
         return (
-            <div>
-                <div className="menuOpzioni">
+            <div className= "firstDiv">
+                <div className="opzioni">
                     <UploadFileContainer/>
-                    <div className="opzioni">
+                    <ul id="menufiltra">
+                        <li id="idlista" className="lilista">
+                            <a className="FiltraName filtraggio" onClick={this.visibleMenu}>Filtra</a>
+                            <ul className="hidden">
+                                <li> <a className="filtraggio" onClick={this.filterImage}>Immagini</a></li>
+                                <li> <a className="filtraggio" onClick={this.filterPdf}>PDF</a></li>
+                                <li> <a className="filtraggio" onClick={this.filterTesti}>Testo</a></li>
+                                <li> <a className="filtraggio" onClick={this.filterAltri}>Altri</a></li>
+                                <li> <a className="filtraggio" onClick={this.resetFilter}>Resetta</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <input type="search" id="input" name="s" placeholder="Cerca un file..." ref={(input) => this.getTitle = input} onChange={this.searchFile}/>
+                </div>
+                <div className="tiles-flex">
+                     {
+                         this.state.searching?
+                             listSearching
+                             :
 
-
-
-                        <div>
-
-                                <ul id="menufiltra">
-                                    <li id="idlista" className="lilista"><a className="FiltraName filtraggio" onClick={this.visibleMenu}>Filtra</a>
-                                        <ul className="hidden">
-                                            <li> <a className="filtraggio" onClick={this.filterImage}>Immagini</a></li>
-                                            <li> <a className="filtraggio" onClick={this.filterPdf}>PDF</a></li>
-                                            <li> <a className="filtraggio" onClick={this.filterTesti}>Testo</a></li>
-                                            <li> <a className="filtraggio" onClick={this.filterAltri}>Altri</a></li>
-                                            <li> <a className="filtraggio" onClick={this.resetFilter}>Resetta</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                                <input type="search" id="s" name="s" placeholder="Cerca un file..." ref={(input) => this.getTitle = input} onChange={this.searchFile}/>
-                                <input type="submit" id="sub" name="sub" className="cerca" />
-
-                        </div>
-
-
-                    </div>
-
-
-
-                    <h1 className="titolo">Libreria Multimediale</h1></div>
-
-                    <div className="tiles-flex">
-                         {
-                             this.state.searching?
-                                 listSearching
-                                 :
-
-                             this.state.imageClicked?
-                                 image
-                                 :
-                             this.state.pdfClicked?
-                                 pdf
-                                 :
-                             this.state.testiClicked?
-                                testi
-                                :
-                             this.state.altriClicked?
-                                altri
-                                :
-                             this.state.imageClicked || this.state.pdfClicked || this.state.testiClicked || this.state.altriClicked?
-                                <div></div>
-                                :
-                                listImage
-                        }
-
-                     </div>
+                         this.state.imageClicked?
+                             image
+                             :
+                         this.state.pdfClicked?
+                             pdf
+                             :
+                         this.state.testiClicked?
+                            testi
+                            :
+                         this.state.altriClicked?
+                            altri
+                            :
+                         this.state.imageClicked || this.state.pdfClicked || this.state.testiClicked || this.state.altriClicked?
+                            <div></div>
+                            :
+                            listImage
+                    }
+                 </div>
             </div>
         )
     }
 }
-
 export default ListFileComponent;

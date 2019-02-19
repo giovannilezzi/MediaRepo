@@ -276,7 +276,8 @@ ul.topnav li.right {float: right;}
 
 
 .tiles-flex {
-    margin-top: 5%;
+    margin-top: -10%;
+    margin-left: 6%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -286,11 +287,6 @@ ul.topnav li.right {float: right;}
     -ms-flex-pack: center;
     justify-content: center;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-line-pack: center;
-    align-content: center;
-    max-width: 1800px;
 }
 
 .tile {
@@ -298,7 +294,7 @@ ul.topnav li.right {float: right;}
     background-color: #fff;
     box-shadow: 0.5px 2px 4px 0 #bdbdbd;
     width: 200px;
-    height: 220px;
+    height: auto;
     margin: 10px;
     padding: 10px;
     -webkit-transition: 250ms;
@@ -355,28 +351,20 @@ ul.topnav li.right {float: right;}
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    -ms-flex-pack: distribute;
     justify-content: space-around;
 }
 
 .tile .tile-description {
+    padding: 20px 0px;
     font-size: 14px;
     letter-spacing: .2px;
     line-height: 1.25;
     color: #1569C7;
-    height: 89px;
-    width: 100%;
     margin: 0px;
     display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-item-align: auto;
-    align-self: auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-pack: distribute;
     justify-content: space-around;
 }
 
@@ -420,7 +408,8 @@ ul.topnav li.right {float: right;}
 
 .show {display: block;}
 
-#s {
+#input {
+    margin-top: 6%;
     -moz-border-radius: 14px;
     -webkit-border-radius: 14px;
     border-radius: 14px;
@@ -428,7 +417,6 @@ ul.topnav li.right {float: right;}
     -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75) inset;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75) inset;
     position: relative;
-    margin-left: 20%;
 }
 
 .delete {
@@ -457,6 +445,10 @@ ul.topnav li.right {float: right;}
     margin-right:auto;
     outline: none;
     color:#fff;
+}
+
+.editNuovo {
+    background-image: url("https://png.icons8.com/color/edit");
 }
 
 .cerca{
@@ -495,15 +487,10 @@ ul {
 /* menu */
 
 #menufiltra {
-    position: center;
-    background-color: #48ff43;
-    background: -moz-linear-gradient(#c4fff5, #dcfffc); /* firefox*/
-    background: linear-gradient(#c4fff5, #dcfffc);
     border: 1px solid #1032e7;
-    border-radius: 6px;
+    border-radius: 20px;
     box-shadow: 1px 1px 4px #1862f1;
     text-align: center;
-
 }
 
 /* links */
@@ -517,8 +504,6 @@ ul {
     font: bold 0.7em Arial, Helvetica;
     text-decoration: none;
     text-shadow: 0 1px #000000;
-    border-right: 1px solid #222;
-    box-shadow: 1px 0 #444;
 }
 
 
@@ -535,7 +520,6 @@ ul {
     position: absolute;
     top: 100px;
     left: 0;
-    background-color: #dbfffa;
     opacity: 0.5;
     visibility: hidden;
     z-index: 1000;
@@ -578,8 +562,6 @@ ul {
 /* Aggiunta del bottone per upload di un file*/
 .upload-btn-wrapper {
     position: relative;
-    overflow: hidden;
-    display: inline-block;
 }
 
 .up {
@@ -587,7 +569,7 @@ ul {
     color: #000000;
     background-color: white;
     padding: 8px 20px;
-    border-radius: 8px;
+    border-radius: 20px;
     font-size: 20px;
     font-weight: bold;
     cursor: cell;
@@ -629,4 +611,24 @@ ul {
         margin-top: 20%;
         margin-left: -10%;
     }
+}
+
+.immagineFile{
+    font-size: 1.2rem;
+}
+
+.titoloFile{
+    font-size: 1rem;
+    padding: 0px 10px;}
+
+.underFile{
+    padding: 20px 10px;
+}
+
+.imageDelete{
+    margin-left: 10px;
+}
+
+.firstDiv{
+    margin-top: 10%;
 }

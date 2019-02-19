@@ -18,9 +18,7 @@ $('head').prepend(link);
 
 ReactDOM.render(
     <Provider store={store}>
-        <div id="page">
             <ListFileContainer/>
-        </div>
     </Provider>,
     document.getElementById('root'),
 );

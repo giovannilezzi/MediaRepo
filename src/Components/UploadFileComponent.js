@@ -25,25 +25,20 @@ class UploadFileComponent extends React.Component{
     }
 
     handleFileSelect = (event) => {
-        this.props.handleFileSelect(event, $('#post-list2').text())
+        this.props.handleFileSelect(event, 'Town Square')
         //su mattermost:   this.props.handleFileSelect(event, $('#channelHeaderDropdownButton').text())
         //in locale:   this.props.handleFileSelect(event, $('#post-list2').text())
     }
 
     render() {
         return (
-            <section className="section">
-                <h2 id = 'post-list2'>Town Square</h2>
-                <div className="upload-btn-wrapper">
-                    <i className=""></i>
-                    <label className="up fas fa-plus">
-                          New
-                        <input input type="file"  onChange={this.handleFileSelect}/>
-                    </label>
+            <div className="upload-btn-wrapper">
+                <label className="up fas fa-plus">
+                      New
+                    <input input type="file"  onChange={this.handleFileSelect}/>
+                </label>
 
-                </div>
-
-            </section>
+            </div>
         );
     }
 }
