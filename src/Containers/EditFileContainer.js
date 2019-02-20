@@ -5,6 +5,7 @@ import EditFileComponent from '../Components/EditFileComponent'
 const mapStateToProps = (state) => {
     return {
         responseUpdatePost : state.EditReducer.responseEdit
+
     };
 };
 

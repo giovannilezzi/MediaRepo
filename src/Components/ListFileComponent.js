@@ -188,6 +188,8 @@ class ListFileComponent extends React.Component{
                               < div  id = "loader"></div>
                       </div>
         return (
+
+
             <div className= "firstDiv">
                 <div className="opzioni">
                     <UploadFileContainer/>

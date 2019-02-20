@@ -5,7 +5,6 @@ import store from './Store/AppStore'
 import AppContainer from "./Containers/AppContainer";
 import './style.css'
 import $ from "jquery";
-import FilePreview from "./Components/FilePreview";
 
 var link = $('<link/>', {
     rel: 'stylesheet',
