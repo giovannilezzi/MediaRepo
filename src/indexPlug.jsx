@@ -2,10 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './Store/AppStore';
-import UploadFileContainer from './Containers/UploadFileContainer'
 import $ from 'jquery'
-import Menu from "./Components/Menu";
 import './style.css'
+import AppContainer from "./Containers/AppContainer";
 
 
 // Courtesy of https://feathericons.com/
@@ -29,16 +28,10 @@ class HelloWorldPlugin {
                 $('head').prepend(link);
                 ReactDOM.render(
                     <Provider store={store}>
-                        <div>
-                            <Menu/>
-                        </div>
-
-                        <div id="page">
-                            <UploadFileContainer/>
-                        </div>
+                        <AppContainer/>
                     </Provider>,
-                    document.getElementById('post-list')
-                );
+                    document.getElementById('post-list'),
+                )
             },
             <Icon />,
         );

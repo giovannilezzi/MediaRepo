@@ -4,8 +4,8 @@ import { Provider } from 'react-redux';
 import store from './Store/AppStore'
 import AppContainer from "./Containers/AppContainer";
 import './style.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import $ from "jquery";
+import FilePreview from "./Components/FilePreview";
 
 var link = $('<link/>', {
     rel: 'stylesheet',

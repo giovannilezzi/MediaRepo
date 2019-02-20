@@ -26,6 +26,20 @@
     max-width: 80%;
     background: white;
     top: 10%;
+    /* fino a qui*/
+    width: 50%;
+    height: 90%;
+    /* margin: 0 auto; */
+    margin-left: -10%;
+    margin-top: -2%;
+}
+
+.Image{
+    z-index: 10;
+    position: absolute;
+    max-width: 80%;
+    background: white;
+    top: 10%;
 }
 
 .files{
@@ -620,7 +634,6 @@ ul {
 }
 
 .titoloFile{
-    font-size: 1rem;
     padding: 0px 10px;}
 
 .underFile{

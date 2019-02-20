@@ -15,7 +15,7 @@ class AppComponent extends React.Component{
             <div id= "appPreview">
                 {
                     this.props.previewFileClicked?
-                        <div class="preview">
+                        <div className="preview">
                             <PreviewContainer/>
                         </div>
                         :
@@ -24,7 +24,7 @@ class AppComponent extends React.Component{
 
                 {
                     this.props.editFileClicked?
-                        <div class="preview">
+                        <div className="preview">
                             <EditFileContainer file={this.props.file}/>
                         </div>
                         :
