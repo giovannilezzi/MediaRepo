@@ -118,6 +118,18 @@ class ListFileComponent extends React.Component{
     }
 
 
+    openFilterMenu = () => {
+        document.getElementsByClassName('dropdownMenuNuovo')[0].classList.toggle('down');
+        document.getElementsByClassName('arrowMenu')[0].classList.toggle('gone');
+        if (document.getElementsByClassName('dropdownMenuNuovo')[0].classList.contains('down')) {
+            setTimeout(function() {
+                document.getElementsByClassName('dropdownMenuNuovo')[0].style.overflow = 'visible'
+            }, 500)
+        } else {
+            document.getElementsByClassName('dropdownMenuNuovo')[0].style.overflow = 'hidden'
+        }
+    }
+
     render() {
     //    this.props.asyncCallAllFiles('Town Square')+
         if (!this.props.allFilesLoaded) {
@@ -193,19 +205,30 @@ class ListFileComponent extends React.Component{
             <div className= "firstDiv">
                 <div className="opzioni">
                     <UploadFileContainer/>
-                    <ul id="menufiltra">
-                        <li id="idlista" className="lilista">
-                            <a className="FiltraName filtraggio" onClick={this.visibleMenu}>Filtra</a>
-                            <ul className="hidden">
-                                <li> <a className="filtraggio" onClick={this.filterImage}>Immagini</a></li>
-                                <li> <a className="filtraggio" onClick={this.filterPdf}>PDF</a></li>
-                                <li> <a className="filtraggio" onClick={this.filterTesti}>Testo</a></li>
-                                <li> <a className="filtraggio" onClick={this.filterAltri}>Altri</a></li>
-                                <li> <a className="filtraggio" onClick={this.resetFilter}>Resetta</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <input type="search" id="input" name="s" placeholder="Cerca un file..." ref={(input) => this.getTitle = input} onChange={this.searchFile}/>
+                    <div className="search">
+                        <input type="checkbox" id="trigger" className="search__checkbox" onChange={this.searchFile}/>
+                        <label className="search__label-init" htmlFor="trigger"></label>
+                        <label className="search__label-active" htmlFor="trigger"></label>
+                        <div className="search__border"></div>
+                        <input type="text" className="search__input" ref={(input) => this.getTitle = input} onChange={this.searchFile} />
+                        <div className="search__close"></div>
+                    </div>
+
+                    <div className="menuNuovo">
+                        <div className="titleMenuNuovo" onClick={this.openFilterMenu}>Filtra <span className=" spanZone fa fa-bars"></span>
+                            <div className="arrowMenu"></div>
+                        </div>
+                        <div className="dropdownMenuNuovo">
+                            <p className="pMenuNuovo" onClick={this.filterImage}>Immagini <span className="spanZone far fa-file-image"></span></p>
+                            <p className="pMenuNuovo" onClick={this.filterPdf}>PDF <span className="spanZone far fa-file-pdf"></span></p>
+                            <p className="pMenuNuovo" onClick={this.filterTesti}>Testo <span className="spanZone far fa-file-alt"></span></p>
+                            <p className="pMenuNuovo" onClick={this.filterAltri}>Altro <span className="spanZone far fa-file"></span></p>
+                            <p className="pMenuNuovo" onClick={this.resetFilter}>Resetta <span className="spanZone far fa-window-close"></span></p>
+                        </div>
+                    </div>
+
+
+
                 </div>
                 <div className="tiles-flex">
                      {
