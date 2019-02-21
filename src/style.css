@@ -625,7 +625,7 @@ html, #root {
 
 
 /*Per spostare il cerca */
-.search {
+.searchInMenu {
     position: absolute;
     left: 40%;
     margin-top: 4%;

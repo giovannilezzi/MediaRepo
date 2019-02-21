@@ -197,7 +197,7 @@ class ListFileComponent extends React.Component{
             <div className= "firstDiv">
                 <div className="opzioni">
                     <UploadFileContainer/>
-                    <div className="search">
+                    <div className="searchInMenu">
                         <input type="checkbox" id="trigger" className="search__checkbox" onChange={this.searchFile}/>
                         <label className="search__label-init" htmlFor="trigger"></label>
                         <label className="search__label-active" htmlFor="trigger"></label>
