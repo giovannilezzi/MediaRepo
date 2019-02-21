@@ -132,7 +132,7 @@ input[type="file"] {
 
 .custom-file-upload {
   /*  border: 3px solid #000000;*/
-    margin-left: 5%;
+    margin-left: 10%;
     display: inline;
     margin-top: -2%;
     padding: 2% 2%;
@@ -445,20 +445,21 @@ html, #root {
 /* Aggiunta del bottone per upload di un file*/
 .upload-btn-wrapper {
     position: absolute;
-    margin-top: 5%;
-    margin-left: 25%;
+    margin-top: 5.5%;
+    margin-left: 30%;
 }
 
 .up {
     border: 2px solid #060e44;
-    color: #000000;
+    color: #1569C7;
     background-color: white;
     padding: 8px 20px;
-    border: 0.5rem solid;
+    border: 0.1rem solid;
     border-radius: 20px;
     font-size: 20px;
     font-weight: bold;
     cursor: cell;
+    box-shadow: 0 0 40px -10px #000
 
 }
 
@@ -595,7 +596,7 @@ html, #root {
     background-color: white;
     color: black;
     border: 2px solid #008CBA;
-    margin-left: 30%;
+    margin-left: 25%;
 }
 @media screen and (max-width: 750px) {
     .button2 {
@@ -639,9 +640,9 @@ html, #root {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 6rem;
-    height: 100%;
-    border: 0.6rem solid #000000;
+    width: 3rem;
+    height: 50%;
+    border: 0.2rem solid #1569C7;
     border-radius: 10rem;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -650,6 +651,7 @@ html, #root {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-shadow: 0 0 40px -10px #000
 
 }
 #trigger:checked ~ .search__border {
@@ -668,6 +670,7 @@ html, #root {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-shadow: 0 0 40px -10px #000
 
 }
 .search__border:after {
@@ -675,10 +678,10 @@ html, #root {
     position: absolute;
     bottom: -1.6rem;
     right: -1.6rem;
-    width: 3rem;
-    height: 0.6rem;
-    background: #000000;
-    border-radius: 0.6rem;
+    width: 2rem;
+    height: 0.3rem;
+    background: #1569C7;
+    border-radius: 0.9rem;
     -webkit-transform-origin: 100% 50%;
     transform-origin: 100% 50%;
     -webkit-transform: rotate(225deg) translateX(3rem);
@@ -688,24 +691,25 @@ html, #root {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-shadow: 0 0 40px -10px #000
 
 }
 .search__input {
     position: relative;
-    width: 26rem;
+    width: 20rem;
     height: 6rem;
     padding: 0.9rem 0 0.9rem 2.4rem;
     background: transparent;
     outline: none;
     border: none;
-    font-size: 2.4rem;
     color: #000000;
     z-index: -1;
     opacity: 0;
     transition: opacity 0.2s;
-    font-size: 62.5%;
+    font-size: 100%;
     box-sizing: border-box;
     margin: 0;
+    left: 20%;
     padding: 0;
 }
 #trigger:checked ~ .search__input {
@@ -728,8 +732,8 @@ html, #root {
     z-index: 2;
     position: absolute;
     top: 0;
-    left: 13.12rem;
-    width: 6.8rem;
+    left: 8.12rem;
+    width: 3.8rem;
     height: 6.4rem;
     cursor: pointer;
 
@@ -800,8 +804,8 @@ html, #root {
     left: 0;
     width: 100%;
     height: 0.6rem;
-    background: #000000;
-    border-radius: 0.5rem;
+    background: #1569C7;
+    border-radius: 0.8rem;
     opacity: 0;
 
 
@@ -838,7 +842,7 @@ html, #root {
     z-index: 10;
     width:260px;
     margin-top: 5%;
-    margin-left: 65%;
+    margin-left: 60%;
     cursor:pointer;
 }
 

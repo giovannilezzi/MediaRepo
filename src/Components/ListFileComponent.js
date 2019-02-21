@@ -1,5 +1,4 @@
 import React from 'react';
-import $ from 'jquery'
 import FileContainer from '../Containers/FileContainer'
 import UploadFileContainer from "../Containers/UploadFileContainer";
 
@@ -191,15 +190,14 @@ class ListFileComponent extends React.Component{
                       </div>
         return (
 
-
             <div className= "firstDiv">
                 <div className="opzioni">
                     <UploadFileContainer/>
                     <div className="searchInMenu">
-                        <input type="checkbox" id="trigger" className="search__checkbox" onChange={this.searchFile}/>
+                        <input type="checkbox" id="trigger" className="search__checkbox"  />
                         <label className="search__label-init" htmlFor="trigger"></label>
                         <label className="search__label-active" htmlFor="trigger"></label>
-                        <div className="search__border"></div>
+                        <div className="search__border"> </div>
                         <input type="text" className="search__input" ref={(input) => this.getTitle = input} onChange={this.searchFile} />
                         <div className="search__close"></div>
                     </div>
