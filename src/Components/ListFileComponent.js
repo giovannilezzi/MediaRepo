@@ -19,14 +19,10 @@ class ListFileComponent extends React.Component{
     }
 
     disableMenu = () => {
-        var element = document.getElementById("idlista");
+        var element = document.getElementById("filtriMenu");
         element.classList.remove("mystyle");
     }
 
-    disableMenu = () => {
-        var element = document.getElementById("idlista");
-        element.classList.remove("mystyle");
-    }
 
     //Dall'array dei files, si vanno a cercare solo i files con l'estenzione relatica al filtraggio selezionato dal menu a tendina.
     filterImage = () =>{
@@ -112,10 +108,6 @@ class ListFileComponent extends React.Component{
 
     }
 
-    visibleMenu = ( ) => {
-        var element = document.getElementById("idlista");
-        element.classList.add("mystyle");
-    }
 
 
     openFilterMenu = () => {
@@ -218,7 +210,7 @@ class ListFileComponent extends React.Component{
                         <div className="titleMenuNuovo" onClick={this.openFilterMenu}>Filtra <span className=" spanZone fa fa-bars"></span>
                             <div className="arrowMenu"></div>
                         </div>
-                        <div className="dropdownMenuNuovo">
+                        <div id="filtriMenu" className="dropdownMenuNuovo">
                             <p className="pMenuNuovo" onClick={this.filterImage}>Immagini <span className="spanZone far fa-file-image"></span></p>
                             <p className="pMenuNuovo" onClick={this.filterPdf}>PDF <span className="spanZone far fa-file-pdf"></span></p>
                             <p className="pMenuNuovo" onClick={this.filterTesti}>Testo <span className="spanZone far fa-file-alt"></span></p>
