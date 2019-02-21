@@ -677,6 +677,8 @@ html, #root {
     margin-top: 4%;
     box-sizing: border-box;
     padding: 0;
+    z-index: -100;
+
 }
 @media screen and (max-width: 1500px) {
     .searchInMenu {
@@ -915,6 +917,7 @@ html, #root {
     margin-top: 5%;
     margin-left: 60%;
     cursor:pointer;
+    z-index: 100;
 }
 @media screen and (max-width: 1500px) {
     .menuNuovo {
