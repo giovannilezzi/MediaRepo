@@ -260,6 +260,27 @@ html, #root {
     justify-content: center;
     -webkit-box-align: center;
 }
+@media screen and (max-width: 1300px) {
+    .tiles-flex {
+        margin-top: 15%;
+    }
+}
+@media screen and (max-width: 1150px) {
+    .tiles-flex {
+        margin-top: 20%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .tiles-flex {
+        margin-top: 25%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .tiles-flex {
+        margin-top: 40%;
+    }
+}
 
 
 
@@ -448,6 +469,30 @@ html, #root {
     margin-top: 5.5%;
     margin-left: 30%;
 }
+@media screen and (max-width: 1500px) {
+    .upload-btn-wrapper {
+        margin-top: 4%;
+        margin-left: 20%;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .upload-btn-wrapper {
+        margin-top: 0.5%;
+        margin-left: 20%;
+    }
+}
+@media screen and (max-width: 750px) {
+    .upload-btn-wrapper {
+        margin-top: -5%;
+        margin-left: 20%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .upload-btn-wrapper {
+        margin-top: -18%;
+        margin-left: 15%;
+    }
+}
 
 .up {
     border: 2px solid #060e44;
@@ -473,7 +518,6 @@ html, #root {
 
 @media screen and (max-width: 1100px) {
     .up{
-        color: #f12a2d;
         margin-left: 0px; }
 }
 
@@ -604,6 +648,7 @@ html, #root {
     }
 }
 
+
 .button2:hover {
     background-color: #008CBA;
     color: white;
@@ -628,10 +673,34 @@ html, #root {
 /*Per spostare il cerca */
 .searchInMenu {
     position: absolute;
-    left: 40%;
+    left: 39%;
     margin-top: 4%;
     box-sizing: border-box;
     padding: 0;
+}
+@media screen and (max-width: 1500px) {
+    .searchInMenu {
+        left: 30%;
+        margin-top: 2%;
+    }
+}
+@media screen and (max-width: 1150px) {
+    .searchInMenu {
+        left: 30%;
+        margin-top: 3%;
+    }
+}
+@media screen and (max-width: 850px) {
+    .searchInMenu {
+        left: 23%;
+        margin-top: 1%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .searchInMenu {
+        left: 12%;
+        margin-top: -10%;
+    }
 }
 
 
@@ -652,8 +721,9 @@ html, #root {
     margin: 0;
     padding: 0;
     box-shadow: 0 0 40px -10px #000
-
 }
+
+
 #trigger:checked ~ .search__border {
     transition: width 0.4s 0.2s;
     width: 100%;
@@ -661,8 +731,9 @@ html, #root {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
 }
+
+
 #trigger:checked ~ .search__border:after {
     width: 0;
     transition: width 0.2s cubic-bezier(0.42, -0.7, 0.62, 1.25);
@@ -702,7 +773,7 @@ html, #root {
     background: transparent;
     outline: none;
     border: none;
-    color: #000000;
+    color: #008CBA;
     z-index: -1;
     opacity: 0;
     transition: opacity 0.2s;
@@ -845,6 +916,36 @@ html, #root {
     margin-left: 60%;
     cursor:pointer;
 }
+@media screen and (max-width: 1500px) {
+    .menuNuovo {
+        margin-top: 3.5%;
+        margin-left: 60%;
+        width:200px;
+
+    }
+}
+@media screen and (max-width: 1200px) {
+    .menuNuovo {
+        margin-top: 0%;
+        margin-left: 60%;
+        width:200px;
+
+    }
+}
+@media screen and (max-width: 750px) {
+    .menuNuovo {
+        margin-top: -5%;
+        margin-left: 45%;
+        width:200px;
+
+    }
+}
+@media screen and (max-width: 500px) {
+    .menuNuovo {
+        margin-top: -20%;
+        margin-left: 45%;
+    }
+}
 
 .titleMenuNuovo{
     font-size: 20px;
@@ -855,7 +956,7 @@ html, #root {
     border-radius:4px;
     position:relative;
     box-shadow:0 0 40px -10px #000;
-    color:#505050;
+    color:#008CBA;
 }
 
 .spanZone{float:right;font-size:18px!important}
@@ -864,7 +965,7 @@ html, #root {
     background:#fff;
     border-radius:4px;
     box-shadow:0 0 40px -10px #000;
-    color:#505050;
+    color:#008CBA;
     margin-top:24px;
     max-height:0;
     overflow:hidden;
@@ -893,7 +994,7 @@ html, #root {
 }
 
 .pMenuNuovo:hover{
-    background: #91d6ff;
+    background: #1569C7;
     -webkit-transform:scale(1.05);
     color:rgba(255,255,255,0.8);
     box-shadow:0 0 30px -10px #000
