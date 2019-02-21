@@ -9,5 +9,5 @@ export default keyMirror({
     EDIT_FILE: null,
     SEARCH_FILE: null,
     SAVE_FILE_TO_EDIT: null,
-    CLOSE_EDIT_FILE: null
+    CLOSE_FILE: null,
 })

@@ -16,9 +16,11 @@ class PreviewComponent extends React.Component{
         )
     }
 
-    render() {
+    closeFile = () => {
+        this.props.closeFile()
+    }
 
-        console.log(this.split(this.props.file.MimeType))
+    render() {
         let file = ""
         if (this.props.file && !this.props.isLoading) {
             if (this.props.file.MimeType == 'data:image/png;base64,') {
@@ -35,6 +37,9 @@ class PreviewComponent extends React.Component{
             <div className= "myFile">
                 <div className="myOpacity"></div>
                 <div className="centerFile">
+                    <div className="close_file">
+                        <i className="fas fa-times-circle fa-3x" onClick={this.closeFile}></i>
+                    </div>
                     {file}
                 </div>
             </div>

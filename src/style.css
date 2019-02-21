@@ -437,7 +437,7 @@ html, #root {
     margin-top: -10%;
     width: 100%;
     position: absolute;
-    z-index: 100;
+    z-index: 1;
 
 }
 
@@ -869,23 +869,38 @@ html, #root {
 
 .down{max-height:260px}
 
-.arrowMenu{border-left:10px solid transparent;
+.arrowMenu{
+    border-left:10px solid transparent;
     border-right:10px solid transparent;
     border-bottom:10px solid #fff;
     position:absolute;
     right:20px;
     bottom:-24px;
-    display:none}
+    display:none
+}
 
 .arrowMenu.gone{display:block}
 
-.pMenuNuovo{padding:15px 14px;
+.pMenuNuovo{
+    padding:15px 14px;
     margin:0;
     transition:all .1s;
-    font-size: 20px;}
+    font-size: 20px;
+}
 
-.pMenuNuovo:hover{background: #91d6ff;
+.pMenuNuovo:hover{
+    background: #91d6ff;
     -webkit-transform:scale(1.05);
     color:rgba(255,255,255,0.8);
-    box-shadow:0 0 30px -10px #000}
+    box-shadow:0 0 30px -10px #000
+}
+
+.close_file{
+    position: absolute;
+    left: 76.3%;
+    z-index: 100;
+    top: 4.5%;
+    background-color: white;
+    border-radius: 38px;
+}
 

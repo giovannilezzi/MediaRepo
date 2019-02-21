@@ -32,8 +32,8 @@ const FileReducer = (state = initialState , action) => {
         case ActionTypes.EDIT_FILE:
             return { ...state, editFileClicked: false}
 
-        case ActionTypes.CLOSE_EDIT_FILE:
-            return { ...state, editFileClicked: false}
+        case ActionTypes.CLOSE_FILE:
+            return { ...state, editFileClicked: false, previewFileClicked: false}
 
         default:
             return state;

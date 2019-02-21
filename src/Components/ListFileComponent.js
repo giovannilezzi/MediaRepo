@@ -108,8 +108,6 @@ class ListFileComponent extends React.Component{
 
     }
 
-
-
     openFilterMenu = () => {
         document.getElementsByClassName('dropdownMenuNuovo')[0].classList.toggle('down');
         document.getElementsByClassName('arrowMenu')[0].classList.toggle('gone');

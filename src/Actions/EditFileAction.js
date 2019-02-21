@@ -27,6 +27,6 @@ export const receivedEditResponse = (obj) => ({
     },
 })
 export const closeEditFile = () => ({
-    type: ActionTypes.CLOSE_EDIT_FILE,
+    type: ActionTypes.CLOSE_FILE,
 })
 
