@@ -32,10 +32,10 @@ class PreviewComponent extends React.Component{
         }
         else
             file = <h3 className="loading-indicator">Loading ...</h3>
-
+        console.log(this.props.file)
         return (
             <div className= "myFile">
-                <div className="myOpacity" style="margin-top: 0px;"></div>
+                <div className="myOpacity"></div>
                 <div className="centerFile">
                     <div className="close_file">
                         <i className="fas fa-times-circle fa-3x" onClick={this.closeFile}></i>

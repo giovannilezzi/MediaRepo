@@ -18,12 +18,12 @@ class EditFileComponent extends Component {
         return (
             <div className="myPost">
                 <div className="myOpacity"></div>
-                <div className="myForm ">
+                <div className="myFormMedia ">
                    <input className="insertEdit" required type="text" ref={(input) => this.getName = input}
                           defaultValue={this.props.file.Name} placeholder="Enter new File Name" /><br /><br />
 
                     <button className="  button2" onClick={this.handleEditFile} >
-                        <span className="NoteSpan" >Save Edit </span>
+                        <span>Save Edit </span>
                     </button>
                     <button className="  button3" onClick={this.closeEditFile}>
                         <span>Close</span>

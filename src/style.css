@@ -28,39 +28,38 @@
     /* fino a qui*/
     width: 50%;
     height: 90%;
-    /* margin: 0 auto; */
-    margin-left: 8%;
-    margin-top: -2%;
+     margin: 0 auto;
+    margin-left: -10%;
+    margin-top: 50px;
 }
-/*
-@media screen and (max-width: 2000px) {
-    .File {
-        max-width: 100%;
-        left: 20%;
-        top: 10%;
-    }
-}
+
 @media screen and (max-width: 1800px) {
     .File {
-        max-width: 100%;
-        left: 20%;
-        top: 10%;
+        margin-left: -10%;
+
     }
 }
-@media screen and (max-width: 1650px) {
+@media screen and (max-width: 1500px) {
     .File {
-        max-width: 100%;
-        left: 20%;
-        top: 10%;
+        margin-left: -2%;
     }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1000px) {
     .File {
-        max-width: 120%;
-        left: 20%;
-        top: 10%;
+        margin-left: 8%;
     }
-}*/
+}
+@media screen and (max-width: 800px) {
+    .File {
+        margin-left: 14%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .File {
+        margin-left: 15%;
+        min-width: 70%;
+    }
+}
 
 .Image{
     z-index: 10;
@@ -686,7 +685,7 @@ html, #root {
     z-index: 10;
 }
 
-.myForm {
+.myFormMedia {
     z-index: 10;
     position: absolute;
     top: 40%;
@@ -697,19 +696,19 @@ html, #root {
 }
 
 @media screen and (max-width: 1100px) {
-    .myForm {
+    .myFormMedia {
         margin-left: -5%;
     }
 }
 
 @media screen and (max-width: 580px) {
-    .myForm {
+    .myFormMedia {
         margin-left: -13%;
     }
 }
 
 /*@media screen and (max-width: 750px) {
-    .myForm {
+    .myFormMedia {
         left: 23%;
     }
 }*/
@@ -906,12 +905,89 @@ html, #root {
 
 .close_file{
     position: absolute;
-    left: 76.3%;
+    left: 74.3%;
     z-index: 100;
-    top: 4.5%;
+    top: 12.5%;
     background-color: white;
     border-radius: 38px;
 }
+@media screen and (max-width: 1900px) {
+    .close_file {
+        left: 72.3%;
+    }
+}
+
+@media screen and (max-width: 1700px) {
+    .close_file {
+        left: 70.3%;
+    }
+}
+@media screen and (max-width: 1550px) {
+    .close_file {
+        left: 75.3%;
+
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .close_file {
+        left: 72.3%;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .close_file {
+        left: 69.3%;
+
+    }
+}
+@media screen and (max-width: 1050px) {
+    .close_file {
+        left: 66.3%;
+
+    }
+}
+@media screen and (max-width: 1000px) {
+    .close_file {
+        left: 76.3%;
+    }
+}
+@media screen and (max-width: 900px) {
+    .close_file {
+        left: 70.3%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .close_file {
+        left: 67.3%;
+    }
+}
+@media screen and (max-width: 700px) {
+    .close_file {
+        left: 78.3%;
+    }
+}
+
+
+
+/*/*
+
+@media screen and (max-width: 1000px) {
+    .File {
+        margin-left: 8%;
+    }
+}
+@media screen and (max-width: 800px) {
+    .File {
+        margin-left: 14%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .File {
+        margin-left: 15%;
+        min-width: 70%;
+    }
+}
+*/
 
 
 

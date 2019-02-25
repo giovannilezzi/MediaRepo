@@ -10,6 +10,7 @@ class AppComponent extends React.Component{
     }
 
     render() {
+        console.log(this.props.file)
         return (
             <div id= "appPreview">
                 {
