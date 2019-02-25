@@ -35,7 +35,7 @@ class PreviewComponent extends React.Component{
 
         return (
             <div className= "myFile">
-                <div className="myOpacity"></div>
+                <div className="myOpacity" style="margin-top: 0px;"></div>
                 <div className="centerFile">
                     <div className="close_file">
                         <i className="fas fa-times-circle fa-3x" onClick={this.closeFile}></i>

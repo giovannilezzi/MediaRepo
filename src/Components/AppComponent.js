@@ -10,7 +10,6 @@ class AppComponent extends React.Component{
     }
 
     render() {
-        console.log(this.props)
         return (
             <div id= "appPreview">
                 {
@@ -34,6 +33,7 @@ class AppComponent extends React.Component{
                     <ListFileContainer/>
                 </div>
             </div>
+
         )
     }
 }

@@ -92,12 +92,11 @@ class ListFileComponent extends React.Component{
 
 
 
-    searchFile = (e) => {
+    searchFile = () => {
         this.setState({
             searching: true
         })
 
-        e.preventDefault();
         const requestBody = {
             Name: this.getTitle.value,
             Channel: "Town Square"
@@ -189,15 +188,23 @@ class ListFileComponent extends React.Component{
                               < div  id = "loader"></div>
                       </div>
         return (
+            <div>
+            <header className="headerMediaRepo">
+                <div id="logoMediaRepo">
+                    <span className="iconMediaRepo"> archive </span>
 
+                    <span>
+              Media<b>Repository</b>
+            </span>
+                </div>
+            </header>
             <div className= "firstDiv">
                 <div className="opzioni">
-                    <UploadFileContainer/>
-                    <div className="searchInMenu">
-                        <input type="checkbox" id="trigger" className="search__checkbox"  />
-                        <label className="search__label-init" htmlFor="trigger"></label>
+                    <div className="searchMediaRepo">
+                        <input type="checkbox" id="trigger" className="search__checkbox" />
+                        <label className="search__label-init" htmlFor="trigger" ></label>
                         <label className="search__label-active" htmlFor="trigger"></label>
-                        <div className="search__border"> </div>
+                        <div className="search__border"></div>
                         <input type="text" className="search__input" ref={(input) => this.getTitle = input} onChange={this.searchFile} />
                         <div className="search__close"></div>
                     </div>
@@ -214,9 +221,7 @@ class ListFileComponent extends React.Component{
                             <p className="pMenuNuovo" onClick={this.resetFilter}>Resetta <span className="spanZone far fa-window-close"></span></p>
                         </div>
                     </div>
-
-
-
+                    <UploadFileContainer/>
                 </div>
                 <div className="tiles-flex">
                      {
@@ -242,6 +247,7 @@ class ListFileComponent extends React.Component{
                             listImage
                     }
                  </div>
+            </div>
             </div>
 
     )
