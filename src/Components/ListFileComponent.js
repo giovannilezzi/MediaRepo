@@ -215,7 +215,7 @@ class ListFileComponent extends React.Component{
                 </div>
                 <div className= "firstDiv">
 
-                <div className="tiles-flex">
+                <div className="tiles-flexMedia">
                      {
                          this.state.searching?
                              listSearching

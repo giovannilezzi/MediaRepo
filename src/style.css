@@ -236,128 +236,12 @@ html, #root {
     }
 }
 
-/*Barra caricamento file Gestita solo da css */
-.titolo {
-    text-align: center;
-    font-size:5vw;
-    font-family: "Trebuchet MS", Helvetica, sans-serif;
-    font-weight: normal;
-    margin: 50px 0 0;
-}
 
 
-/*.tiles-flex {
-    margin: 10% 10%;
-    display: flex;
-   justify-content: center;
-}
 
-/*@media screen and (max-width: 1300px) {
-    .tiles-flex {
-        margin-top: 15%;
-    }
-}
-@media screen and (max-width: 1150px) {
-    .tiles-flex {
-        margin-top: 20%;
-    }
-}
-
-@media screen and (max-width: 750px) {
-    .tiles-flex {
-        margin-top: 25%;
-    }
-}
-@media screen and (max-width: 500px) {
-    .tiles-flex {
-        margin-top: 40%;
-    }
-}*/
-/*
-.tile {
-    border-top: 8px solid #343537;
-    background-color: #fff;
-    box-shadow: 0.5px 2px 4px 0 #bdbdbd;
-    width: 200px;
-    height: auto;
-    margin: 10px;
-    padding: 10px;
-    -webkit-transition: 250ms;
-    transition: 250ms;
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-    will-change: transform;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -ms-flex-line-pack: stretch;
-    align-content: stretch;
-    -webkit-box-align: stretch;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    color: #2980B9;
-    text-decoration: none;
-    cursor: pointer;
-    display: block;
-    float: left;
-}
-
-.tile .tile-divider {
-    height: 2px;
-    width: 100%;
-    margin: 0 5px;
-    border: .5px solid #343537;
-    background-color: #343537;
-    -ms-flex-item-align: auto;
-    align-self: auto;
-}
-
-.tile .tile-title {
-    font-size: 20px;
-    letter-spacing: .4px;
-    color: #153E7E ;
-    height: 89px;
-    width: 100%;
-    margin: 0px;
-    padding: 0px 20px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-item-align: auto;
-    align-self: auto;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.tile .tile-description {
-    padding: 20px 0px;
-    font-size: 14px;
-    letter-spacing: .2px;
-    line-height: 1.25;
-    color: #1569C7;
-    margin: 0px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    justify-content: space-around;
-}
-*/
-.tiles-flex {
+.tiles-flexMedia {
     margin-top: 10%;
-    margin-left: 6%;
+    margin-left: -10%;
     z-index: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -370,32 +254,32 @@ html, #root {
     -webkit-box-align: center;
 }
 @media screen and (max-width: 1300px) {
-    .tiles-flex {
-        margin-top: 15%;
+    .tiles-flexMedia {
+        margin-top: 10%;
     }
 }
 @media screen and (max-width: 1150px) {
-    .tiles-flex {
-        margin-top: 20%;
+    .tiles-flexMedia {
+        margin-top: 15%;
     }
 }
 
 @media screen and (max-width: 750px) {
-    .tiles-flex {
-        margin-top: 25%;
+    .tiles-flexMedia {
+        margin-top: 15%;
     }
 }
 @media screen and (max-width: 500px) {
-    .tiles-flex {
-        margin-top: 40%;
+    .tiles-flexMedia {
+        margin-top: 10%;
     }
 }
 
 
 
-.tile {
+.tileMedia {
     border-top: 8px solid #343537;
-    background-color: #fff;
+    background-color: #ffe9ca;
     box-shadow: 0.5px 2px 4px 0 #bdbdbd;
     width: 200px;
     height: auto;
@@ -430,7 +314,30 @@ html, #root {
 
 }
 
-.tile .tile-divider {
+@media screen and (max-width: 1250px) {
+    .tileMedia {
+        width: 20%;
+        height: 150px;
+    }
+}
+@media screen and (max-width: 750px) {
+    .tileMedia {
+        width: 20%;
+        height: 130px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .tileMedia {
+        width: 158px;
+        height: 120px;
+
+    }
+}
+
+
+
+.tileMedia .tile-divider {
     height: 2px;
     width: 100%;
     margin: 0 5px;
@@ -439,8 +346,15 @@ html, #root {
     -ms-flex-item-align: auto;
     align-self: auto;
 }
+/*
+@media screen and (max-width: 700px) {
+    .tile-divider {
+        margin-top: 0%;
 
-.tile .tile-title {
+    }
+}*/
+
+.tileMedia .tile-title {
     font-size: 20px;
     letter-spacing: .4px;
     color: #153E7E ;
@@ -460,7 +374,7 @@ html, #root {
     justify-content: space-around;
 }
 
-.tile .tile-description {
+.tileMedia .tile-description {
     padding: 20px 0px;
     font-size: 14px;
     letter-spacing: .2px;
@@ -473,6 +387,14 @@ html, #root {
     -ms-flex-direction: column;
     justify-content: space-around;
 }
+
+@media screen and (max-width: 700px) {
+    .tile-description {
+        font-size: 11px;
+    }
+}
+
+
 
 /*CSS per menu a tendina*/
 .dropbtn {
@@ -662,12 +584,40 @@ html, #root {
     padding: 0px 10px;}
 
 .underFile{
-    padding: 20px 10px;
+    padding: 20px 0px;
 }
+/*
+@media screen and (max-width: 700px) {
+    .underFile {
+        margin-left: 10%;
+        margin-top: -30%;
+    }
+}
+*/
 
 .imageDelete{
     margin-left: 10px;
 }
+/*
+@media screen and (max-width: 700px) {
+    .imageDelete {
+        margin-left: -5%;
+        position: absolute;
+    }
+}
+*/
+
+.imageEdit{
+    margin-left: 10px;
+}
+/*
+@media screen and (max-width: 700px) {
+    .imageEdit {
+        margin-left: -45%;
+        position: absolute;
+    }
+}*/
+
 
 #appPreview {
     width: 100%;
@@ -697,13 +647,13 @@ html, #root {
 
 @media screen and (max-width: 1100px) {
     .myFormMedia {
-        margin-left: -5%;
+        margin-left: -13%;
     }
 }
 
 @media screen and (max-width: 580px) {
     .myFormMedia {
-        margin-left: -13%;
+        margin-left: -21%;
     }
 }
 
@@ -966,28 +916,6 @@ html, #root {
         left: 78.3%;
     }
 }
-
-
-
-/*/*
-
-@media screen and (max-width: 1000px) {
-    .File {
-        margin-left: 8%;
-    }
-}
-@media screen and (max-width: 800px) {
-    .File {
-        margin-left: 14%;
-    }
-}
-@media screen and (max-width: 600px) {
-    .File {
-        margin-left: 15%;
-        min-width: 70%;
-    }
-}
-*/
 
 
 

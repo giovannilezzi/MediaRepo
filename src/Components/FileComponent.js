@@ -35,7 +35,7 @@ class FileComponent extends React.Component{
 
     render() {
       return(
-          <a className="tile" id={this.props.file.Id}   key={this.props.file.Id}>
+          <a className="tileMedia" id={this.props.file.Id}   key={this.props.file.Id}>
               <h2 className="tile-description" onClick={this.viewFile}  id={this.props.file.Id} >
                   {
                   this.props.file.MimeType=='data:image/png;base64,' || this.props.file.MimeType=='data:image/jpeg;base64,'?
@@ -56,7 +56,7 @@ class FileComponent extends React.Component{
 
 
               <div className="underFile">
-                  <img src="https://png.icons8.com/color/edit" onClick={this.editFile}/>
+                  <img className="imageEdit" src="https://png.icons8.com/color/edit" onClick={this.editFile}/>
                   <img className="imageDelete" src="https://png.icons8.com/color/delete" onClick={this.deleteFile} />
               </div>
 
