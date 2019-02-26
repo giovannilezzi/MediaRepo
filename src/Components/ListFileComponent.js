@@ -28,7 +28,6 @@ class ListFileComponent extends React.Component{
             pdfClicked: false,
             altriClicked: false
         })
-        this.disableMenu()
 
     }
 
@@ -39,7 +38,6 @@ class ListFileComponent extends React.Component{
             imageClicked: false,
             altriClicked: false
         })
-        this.disableMenu()
 
     }
 
@@ -50,7 +48,6 @@ class ListFileComponent extends React.Component{
             imageClicked: false,
             altriClicked: false
         })
-        this.disableMenu()
 
     }
 
@@ -61,7 +58,6 @@ class ListFileComponent extends React.Component{
             pdfClicked: false,
             imageClicked: false
         })
-        this.disableMenu()
 
     }
 
@@ -73,7 +69,6 @@ class ListFileComponent extends React.Component{
             altriClicked: false
 
         })
-        this.disableMenu()
 
     }
 
@@ -110,6 +105,15 @@ class ListFileComponent extends React.Component{
             }, 500)
         } else {
             document.getElementsByClassName('dropdownMenuNuovo')[0].style.overflow = 'hidden'
+        }
+    }
+
+    myFunction = () => {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
         }
     }
 
@@ -193,31 +197,24 @@ class ListFileComponent extends React.Component{
             </span>
                 </div>
             </header>
-            <div className= "firstDiv">
-                <div className="opzioni">
-                    <div className="searchMediaRepo">
-                        <input type="checkbox" id="trigger" className="search__checkbox" />
-                        <label className="search__label-init" htmlFor="trigger" ></label>
-                        <label className="search__label-active" htmlFor="trigger"></label>
-                        <div className="search__border"></div>
-                        <input type="text" className="search__input" ref={(input) => this.getTitle = input} onChange={this.searchFile} />
-                        <div className="search__close"></div>
-                    </div>
 
-                    <div className="menuNuovo">
-                        <div className="titleMenuNuovo" onClick={this.openFilterMenu}>Filtra <span className=" spanZone fa fa-bars"></span>
-                            <div className="arrowMenu"></div>
-                        </div>
-                        <div id="filtriMenu" className="dropdownMenuNuovo">
-                            <p className="pMenuNuovo" onClick={this.filterImage}>Immagini <span className="spanZone far fa-file-image"></span></p>
-                            <p className="pMenuNuovo" onClick={this.filterPdf}>PDF <span className="spanZone far fa-file-pdf"></span></p>
-                            <p className="pMenuNuovo" onClick={this.filterTesti}>Testo <span className="spanZone far fa-file-alt"></span></p>
-                            <p className="pMenuNuovo" onClick={this.filterAltri}>Altro <span className="spanZone far fa-file"></span></p>
-                            <p className="pMenuNuovo" onClick={this.resetFilter}>Resetta <span className="spanZone far fa-window-close"></span></p>
+                <div className="navbarMediaRepo">
+                    <a className="TypeFilterList"> <UploadFileContainer/> </a>
+                    <div className="subnavMediaRepo">
+                        <button className="subnavbtnMediaRepo">Filtra <i className="fa fa-caret-down"></i></button>
+                        <div className="subnav-contentMediaRepo">
+                            <a className="TypeFilterList" onClick={this.filterImage}>Immagini  <span className="spanZone far fa-file-image"></span></a>
+                            <a className="TypeFilterList" onClick={this.filterPdf}>PDF <span className="spanZone far fa-file-pdf"></span></a>
+                            <a className="TypeFilterList" onClick={this.filterTesti}>Testi <span className="spanZone far fa-file-alt"></span></a>
+                            <a className="TypeFilterList" onClick={this.filterAltri}>Altro <span className="spanZone far fa-file"></span></a>
+                            <a className="TypeFilterList" onClick={this.resetFilter}>Reset <span className="spanZone far fa-window-close"></span></a>
                         </div>
                     </div>
-                    <UploadFileContainer/>
+                    <input type="text" placeholder="Search File.." className="inputStyleMediaRepo" ref={(input) => this.getTitle = input} onChange={this.searchFile}/>
+
                 </div>
+                <div className= "firstDiv">
+
                 <div className="tiles-flex">
                      {
                          this.state.searching?

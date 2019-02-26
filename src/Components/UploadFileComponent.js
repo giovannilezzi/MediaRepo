@@ -31,13 +31,11 @@ class UploadFileComponent extends React.Component{
 
     render() {
         return (
-            <div className="upload-btn-wrapper">
-                <label className="up fas fa-plus">
+                <label >
                       New
                     <input input type="file"  onChange={this.handleFileSelect}/>
                 </label>
 
-            </div>
         );
     }
 }

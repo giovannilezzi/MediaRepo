@@ -1269,3 +1269,86 @@ html, #root {
 .firstDiv{
     margin-left: 10%;
 }
+
+
+/*__________________*/
+
+.navbarMediaRepo {
+    overflow: hidden;
+    background-color: #1a8fff;
+}
+
+.navbarMediaRepo .TypeFilterList {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.subnavMediaRepo {
+    float: left;
+    overflow: hidden;
+}
+
+.subnavMediaRepo .subnavbtnMediaRepo {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbarMediaRepo .TypeFilterList:hover, .subnavMediaRepo:hover .subnavbtnMediaRepo {
+    background-color: #005ac7;
+}
+
+.subnav-contentMediaRepo {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: #005ac7;
+    width: 100%;
+    z-index: 1;
+}
+
+.subnav-contentMediaRepo .TypeFilterList {
+    float: left;
+    color: white;
+    text-decoration: none;
+}
+
+.subnav-contentMediaRepo .TypeFilterList:hover {
+    background-color: #dbfffa;
+    color: black;
+}
+
+.subnavMediaRepo:hover .subnav-contentMediaRepo {
+    display: block;
+}
+
+
+.inputStyleMediaRepo{
+    margin-top: 14px;
+    width: 15%;
+    box-shadow: 0.5px 2px 4px 0 #dbfffa;
+    border-radius: 20px;
+}
+@media screen and (max-width: 1100px) {
+    .inputStyleMediaRepo {
+        width: 25%;
+    }
+}
+@media screen and (max-width: 450px) {
+    .inputStyleMediaRepo {
+        width: 50%;
+    }
+}
+
+.inputStyleMediaRepo:hover {
+    background-color: #dbfffa;
+}
