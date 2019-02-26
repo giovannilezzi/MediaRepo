@@ -32,7 +32,6 @@ class PreviewComponent extends React.Component{
         }
         else
             file = <h3 className="loading-indicator">Loading ...</h3>
-        console.log(this.props.file)
         return (
             <div className= "myFile">
                 <div className="myOpacity"></div>

@@ -14,9 +14,6 @@ class ListFileComponent extends React.Component{
         }
     }
 
-    componentWillMount() {
-    }
-
     disableMenu = () => {
         var element = document.getElementById("filtriMenu");
         element.classList.remove("mystyle");
@@ -96,12 +93,10 @@ class ListFileComponent extends React.Component{
         this.setState({
             searching: true
         })
-
         const requestBody = {
             Name: this.getTitle.value,
             Channel: "Town Square"
         }
-        console.log(this.getTitle.value)
         this.props.searchFile(requestBody)
 
     }
@@ -249,8 +244,8 @@ class ListFileComponent extends React.Component{
                  </div>
             </div>
             </div>
-
-    )
+        )
     }
 }
+
 export default ListFileComponent;

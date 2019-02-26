@@ -31,7 +31,6 @@ class FileComponent extends React.Component{
             document.getElementById('root')
         )*/
         this.props.saveFileToEdit(this.props.file)
-
     }
 
     render() {

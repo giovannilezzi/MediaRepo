@@ -12,7 +12,6 @@ class UploadFileComponent extends React.Component{
         super(props)
     }
 
-
     library = () => {
         ReactDOM.render(
             <Provider store={store}>
