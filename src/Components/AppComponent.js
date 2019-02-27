@@ -11,6 +11,7 @@ class AppComponent extends React.Component{
 
     render() {
         return (
+
             <div id= "appPreview">
                 {
                     this.props.previewFileClicked?

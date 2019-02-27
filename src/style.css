@@ -279,7 +279,7 @@ html, #root {
 
 .tileMedia {
     border-top: 8px solid #343537;
-    background-color: #ffe9ca;
+    background-color: #edfcff;
     box-shadow: 0.5px 2px 4px 0 #bdbdbd;
     width: 200px;
     height: auto;
@@ -930,6 +930,7 @@ html, #root {
     padding: 1.75em 0;
     border-bottom: 1px solid var(--border-color);
     background: var(--neutral-color);
+    z-index: 1000;
 }
 
 .headerMediaRepo #logoMediaRepo {
