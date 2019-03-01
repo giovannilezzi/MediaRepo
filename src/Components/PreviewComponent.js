@@ -9,6 +9,13 @@ class PreviewComponent extends React.Component{
         super(props);
     }
 
+    componentDidMount() {
+        document.getElementById("opacitaPreview").style.marginTop = document.getElementById("post-list").scrollTop + "px";
+        //document.getElementsByClassName("myOpacityCalendar")[0].style.height = Math.max( document.body.scrollHeight) + "px"
+        document.getElementById("post-list").style.overflowY = "hidden"
+        document.getElementsByClassName("myOpacityPreviewFile")[0].style.marginTop = document.getElementById("post-list").scrollTop + "px"
+    }
+
     split = (mimeType) => {
         return mimeType.substring(
             mimeType.lastIndexOf(":") + 1,
@@ -34,8 +41,8 @@ class PreviewComponent extends React.Component{
             file = <h3 className="loading-indicator">Loading ...</h3>
         return (
             <div className= "myFile">
-                <div className="myOpacity"></div>
-                <div className="centerFile">
+                <div className="myOpacityPreviewFile"></div>
+                <div id="opacitaPreview" className="centerFile">
                     <div className="close_file">
                         <i className="fas fa-times-circle fa-3x" onClick={this.closeFile}></i>
                     </div>

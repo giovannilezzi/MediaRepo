@@ -10,8 +10,9 @@ class AppComponent extends React.Component{
     }
 
     render() {
+        document.getElementById("post-list").style.overflowY = "scroll"
+        // document.getElementById("post-list").style.overflowY = "scroll"
         return (
-
             <div id= "appPreview">
                 {
                     this.props.previewFileClicked?
