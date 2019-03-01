@@ -2,8 +2,8 @@ import axios from "axios";
 import ActionTypes from "./ActionTypes";
 
 export function asyncCallGetSearhFiles(requestBody) {
-    //var url = 'http://localhost:3002/searchFileByChannel'
-    var url = 'https://smart.nbsgroup.it/plugins/com.mattermost.server-dbsearchfile'
+    var url = 'http://localhost:3002/searchFileByChannel'
+    //var url = 'https://smart.nbsgroup.it/plugins/com.mattermost.server-dbsearchfile'
 
     return function (dispatch) {
         axios.post(url, JSON.stringify(requestBody))
